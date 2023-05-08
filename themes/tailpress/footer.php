@@ -10,7 +10,7 @@
 <footer id="colophon" class="site-footer" role="contentinfo">
 	<?php do_action( 'tailpress_footer' ); ?>
 
-	<div class="">
+	<div class="border-t border-gray-100">
 		<div class="lg:max-w-7xl mx-auto py-16 grid grid-cols-1 md:grid-cols-3 gap-15 md:mb-4 p-5">
 			<h3 class="italic font-medium mb-6 lg:mb-0">Fabiana Abath é especialista em gestão e desenvolvimento de carreira, com mais de 20 anos de experiência em desenvolvimento humano e organizacional.  Sua missão é transformar a relação das pessoas com o trabalho, contribuindo para existirem cada vez mais profissionais satisfeitos com suas carreiras e empresas prósperas.</h3>
 			<div class="lg:px-5 flex lg:justify-center gap-x-4 mb-6 lg:mb-0">
