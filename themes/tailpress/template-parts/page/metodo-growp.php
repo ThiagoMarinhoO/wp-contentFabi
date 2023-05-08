@@ -1,5 +1,13 @@
+<?php
+$args = [
+    'post_type' => 'depoimentos',
+    'posts_per_page' => -1
+];
+
+$deps = new WP_Query($args);
+?>
 <section class="bg-gray-900">
-    <div class="bg-left-bottom bg-no-repeat bg-[url('/wp-content/uploads/2023/05/FabisemBg.png')] bg-contain bg-blend-multiply">
+    <div class="bg-left-bottom bg-no-repeat bg-[url('/wp-content/themes/tailpress/resources/images/1478sembg.png')] bg-contain bg-blend-multiply">
         <div class="px-4 flex py-14 lg:py-40">
             <div class="lg:w-1/3"></div>
             <div class="px-5 lg:w-2/3 lg:px-16">
@@ -13,7 +21,47 @@
 
 <section class="bg-white lg:max-w-7xl mx-auto px-5 py-12">
     <div class="container mx-auto">
-        <div class="mx-6 md:flex md:items-center md:justify-between">
+        <div>
+            <h2 class="text-center text-4xl font-bold mb-20">Você aprenderá a realizar cinco serviços de carreira:</h2>
+        </div>
+        <div class="grid grid-cols-3 gap-10">
+            <div class="w-3/3">
+                <div class="w-full">
+                    <img src="/wp-content/themes/tailpress/resources/images/suitcase1.png">
+                    <h2 class="my-5 font-bold text-2xl">Desenvolvimento profissional</h2>
+                    <p>para pessoas que estão se sentindo estagnadas profissionalmente e precisam de ajuda para definir o próximo passo de carreira e desenhar o plano de desenvolvimento profissional.</p>
+                </div>
+            </div> 
+            <div class="w-3/3">
+                <div class="w-full">
+                    <img src="/wp-content/themes/tailpress/resources/images/suitcase2.png">
+                    <h2 class="my-5 font-bold text-2xl">Orientação para aposentadoria</h2>
+                    <p>para pessoas que estão prestes a se aposentar e querem continuar trabalhando, a escolherem uma nova carreira alinhada com sua nova fase de vida.</p>
+                </div>
+            </div> 
+            <div class="w-3/3">
+                <div class="w-full">
+                    <img src="/wp-content/themes/tailpress/resources/images/suitcase3.png">
+                    <h2 class="my-5 font-bold text-2xl">Desenvolvimento da Liderança</h2>
+                    <p>para pessoas que queiram suporte para se desenvolver como líderes.</p>
+                </div>
+            </div> 
+            <div class="w-3/3">
+                <div class="w-full">
+                    <img src="/wp-content/themes/tailpress/resources/images/suitcase4.png">
+                    <h2 class="my-5 font-bold text-2xl">Planejamento de Carreira</h2>
+                    <p>para profissionais que desejam desenhar o seu plano de carreira, ou plano de desenvolvimento individual.</p>
+                </div>
+            </div> 
+            <div class="w-3/3">
+                <div class="w-full">
+                    <img src="/wp-content/themes/tailpress/resources/images/suitcase5.png">
+                    <h2 class="my-5 font-bold text-2xl">Transição de Carreira</h2>
+                    <p>para profissionais que desejam mudar de carreira, mas não fazem ideia do que querem.</p>
+                </div>
+            </div> 
+        </div>
+        <!-- <div class="mx-6 md:flex md:items-center md:justify-between">
             <div>
                 <h1 class="text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-5xl">
                     Depoimentos
@@ -33,54 +81,46 @@
                     </svg>
                 </button>
             </div>
+        </div> -->
+    </div>
+</section>
+
+<section class="bg-gradient-to-br from-gray-900 via-gray-900 to-blue-900 px-5 py-12">
+    <div class="container mx-auto">
+        <div>
+            <h2 class="text-center text-4xl font-bold mb-20 text-white">Mais de 100 alunas foram formadas pela Fabiana Abath e já estão trabalhando com Orientação de Carreira do jeito certo e tendo execentes resultados nos seus atendimentos. </h2>
         </div>
-
-        <section class="grid grid-cols-1 gap-8 mt-8 xl:mt-12 lg:grid-cols-2 xl:grid-cols-3">
-            <div class="p-8 border rounded-lg">
-                <p class="leading-loose text-gray-500">
-                    “Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore quibusdam ducimus libero ad
-                    tempora doloribus expedita laborum saepe voluptas perferendis delectus assumenda rerum, culpa
-                    aperiam dolorum, obcaecati corrupti aspernatur a.”.
-                </p>
-
-                <div class="mt-4 -mx-2">
-                    <div class="mx-2">
-                        <h1 class="font-semibold text-gray-800">Robert</h1>
-                        <span class="text-sm text-gray-500">CTO, Robert Consultency</span>
+        <?php
+        if ( $deps->have_posts() ) : ?>
+            <div class="grid grid-cols-4 gap-10 px-5 overflow-hidden">
+                <?php while ( $deps->have_posts() ) : $deps->the_post(); ?>
+                <div class="relative bg-gradient-to-b from-transparent to-white h-full" style="min-height: 400px;" depID="<?php echo get_the_ID()?>">
+                    <img class="w-full h-full object-cover" src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?php echo get_the_title(); ?>">
+                    <div class="absolute bottom-0 left-0 right-0 px-5 py-10 bg-gradient-to-b from-white-200 to-transparent min-h-400 flex flex-col justify-end text-white cursor-pointer open-video" style="min-height: 400px;">
+                        <svg class="w-16 h-16 m-auto text-red-900" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M8 5v10l7-5z" />
+                        </svg>
+                        <h2 class="text-3xl font-bold leading-tight text-blue-900"><?php echo get_the_title(); ?></h2>
+                        <div class="text-blue-900"><?php echo the_content(); ?></div>
                     </div>
                 </div>
+                <?php endwhile; ?>
             </div>
-
-            <div class="p-8 border rounded-lg">
-                <p class="leading-loose text-gray-500">
-                    “Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore quibusdam ducimus libero ad
-                    tempora doloribus expedita laborum saepe voluptas perferendis delectus assumenda rerum, culpa
-                    aperiam dolorum, obcaecati corrupti aspernatur a.”.
-                </p>
-
-                <div class="mt-4 -mx-2">
-                    <div class="mx-2">
-                        <h1 class="font-semibold text-gray-800">Robert</h1>
-                        <span class="text-sm text-gray-500">CTO, Robert Consultency</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="p-8 border rounded-lg">
-                <p class="leading-loose text-gray-500">
-                    “Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore quibusdam ducimus libero ad
-                    tempora doloribus expedita laborum saepe voluptas perferendis delectus assumenda rerum, culpa
-                    aperiam dolorum, obcaecati corrupti aspernatur a.”.
-                </p>
-
-                <div class="mt-4 -mx-2">
-                    <div class="mx-2">
-                        <h1 class="font-semibold text-gray-800">Robert</h1>
-                        <span class="text-sm text-gray-500">CTO, Robert Consultency</span>
-                    </div>
-                </div>
-            </div>
-        </section>
+                <?php while($deps->have_posts()) : $deps->the_post()?>
+                    <div id="modal" class="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 z-50 hidden">
+                        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-lg p-5">
+                            <div class="relative overflow-hidden" style="padding-top: 56.25%">
+                                <iframe id="player" class="absolute top-0 left-0 w-full h-full" src="<?php echo get_field('url_do_video' , get_the_ID())?>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                            <button id="close-modal" class="absolute top-0 right-0 mt-1 mr-1 text-gray-600 hover:text-gray-900 cursor-pointer focus:outline-none">
+                                <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M12.707 12.707a1 1 0 01-1.414 0L10 11.414l-1.293 1.293a1 1 0 01-1.414-1.414L8.586 10 7.293 8.707a1 1 0 011.414-1.414L10 8.586l1.293-1.293a1 1 0 011.414 1.414L11.414 10l1.293 1.293a1 1 0 010 1.414z" clip-rule="evenodd" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div> 
+                <?php endwhile ?>
+        <?php endif; ?>      
     </div>
 </section>
 

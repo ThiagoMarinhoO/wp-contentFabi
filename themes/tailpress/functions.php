@@ -3,6 +3,13 @@
 /**
  * Theme setup.
  */
+$functions_path = get_template_directory() . '/template-parts/functions/';
+
+/**
+ * Require functions partials.
+ */
+require_once($functions_path . 'theme-options.php');
+
 function tailpress_setup() {
 	add_theme_support( 'title-tag' );
 
@@ -43,7 +50,7 @@ function tailpress_enqueue_scripts() {
 
 	wp_enqueue_style( 'tailpress', tailpress_asset( 'css/app.css' ), array(), $theme->get( 'Version' ) );
 
-	wp_enqueue_script( 'tailpress', tailpress_asset( 'js/app.js' ), array(), $theme->get( 'Version' ) );
+	wp_enqueue_script( 'tailpress', tailpress_asset( 'js/app.js' ), array('jquery'), $theme->get( 'Version' ) );
 }
 
 add_action( 'wp_enqueue_scripts', 'tailpress_enqueue_scripts' );
