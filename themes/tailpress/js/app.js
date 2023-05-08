@@ -7,14 +7,6 @@
   \*****************************/
 /***/ (() => {
 
-// Navigation toggle
-window.addEventListener('load', function () {
-  var main_navigation = document.querySelector('#primary-menu');
-  document.querySelector('#primary-menu-toggle').addEventListener('click', function (e) {
-    e.preventDefault();
-    main_navigation.classList.toggle('hidden');
-  });
-});
 jQuery(document).ready(function ($) {
   $('#modal').on('click', function () {
     $(this).addClass('hidden');
@@ -25,15 +17,18 @@ jQuery(document).ready(function ($) {
   });
 });
 window.addEventListener('DOMContentLoaded', function () {
+  var _document$querySelect;
   var main_navigation = document.querySelector('#primaryNavContent');
-  document.querySelector('#hamburguerButton').addEventListener('click', function (e) {
+  (_document$querySelect = document.querySelector('#hamburguerButton')) === null || _document$querySelect === void 0 ? void 0 : _document$querySelect.addEventListener('click', function (e) {
     e.preventDefault();
     main_navigation.classList.toggle('hidden');
   });
 });
 window.addEventListener('DOMContentLoaded', function () {
+  var _document$querySelect2;
   var main_navigation = document.querySelector('#secondaryNavContent');
-  document.querySelector('#secondaryHamburguerButton').addEventListener('click', function (e) {
+  var hamburguerButton = document.querySelector('#secondaryHamburguerButton');
+  (_document$querySelect2 = document.querySelector('#secondaryHamburguerButton')) === null || _document$querySelect2 === void 0 ? void 0 : _document$querySelect2.addEventListener('click', function (e) {
     e.preventDefault();
     main_navigation.classList.toggle('hidden');
   });

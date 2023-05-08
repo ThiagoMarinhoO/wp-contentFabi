@@ -1,11 +1,3 @@
-// Navigation toggle
-window.addEventListener('load', function () {
-      let main_navigation = document.querySelector('#primary-menu');
-      document.querySelector('#primary-menu-toggle').addEventListener('click', function (e) {
-            e.preventDefault();
-            main_navigation.classList.toggle('hidden');
-      });
-});
 jQuery(document).ready(function($) {
       $('#modal').on('click', function() {
           $(this).addClass('hidden');
@@ -19,7 +11,7 @@ jQuery(document).ready(function($) {
   
 window.addEventListener('DOMContentLoaded', function () {
       let main_navigation = document.querySelector('#primaryNavContent');
-      document.querySelector('#hamburguerButton').addEventListener('click', function (e) {
+      document.querySelector('#hamburguerButton')?.addEventListener('click', function (e) {
             e.preventDefault();
             main_navigation.classList.toggle('hidden');
       });
@@ -27,7 +19,8 @@ window.addEventListener('DOMContentLoaded', function () {
 
 window.addEventListener('DOMContentLoaded', function () {
       let main_navigation = document.querySelector('#secondaryNavContent');
-      document.querySelector('#secondaryHamburguerButton').addEventListener('click', function (e) {
+      const hamburguerButton = document.querySelector('#secondaryHamburguerButton')
+      document.querySelector('#secondaryHamburguerButton')?.addEventListener('click', function (e) {
             e.preventDefault();
             main_navigation.classList.toggle('hidden');
       });
