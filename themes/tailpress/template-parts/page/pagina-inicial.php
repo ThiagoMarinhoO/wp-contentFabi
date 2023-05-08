@@ -22,7 +22,7 @@
     <div class="bg-center bg-no-repeat bg-[url('/wp-content/uploads/2023/05/Pattern.png')] bg-blend-multiply">
         <div class="lg:max-w-7xl mx-auto">
             <h1 class="mb-16 text-center text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl">Conheça as soluções em gestão e desenvolvimento de carreira</h1>
-            <div class="grid grid-cols-1 lg:grid-cols-4 space-x-4">
+            <div class="grid grid-cols-1 space-y-5 lg:grid-cols-4 lg:space-x-4 lg:space-y-0">
                 <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow">
                     <div class="h-1/3">
                         <img class="rounded-t-lg h-full w-full" src="/wp-content/uploads/2023/05/ContentImageOpacless.png">
@@ -39,7 +39,7 @@
                 </div>
                 <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow">
                     <div href="#" class="h-1/3">
-                        <img class="rounded-t-lg h-full" src="/wp-content/uploads/2023/05/ContentImageOpacless.png">
+                        <img class="rounded-t-lg h-full w-full" src="/wp-content/uploads/2023/05/ContentImageOpacless.png">
                     </div>
                     <div class="p-5 h-2/3">
                         <a href="#">
@@ -53,7 +53,7 @@
                 </div>
                 <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow">
                     <div href="#" class="h-1/3">
-                        <img class="rounded-t-lg h-full" src="/wp-content/uploads/2023/05/ContentImageOpacless.png">
+                        <img class="rounded-t-lg h-full w-full" src="/wp-content/uploads/2023/05/ContentImageOpacless.png">
                     </div>
                     <div class="p-5 h-1/3">
                         <a href="#">
@@ -67,7 +67,7 @@
                 </div>
                 <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow">
                     <div href="#" class="h-1/3">
-                        <img class="rounded-t-lg h-full" src="/wp-content/uploads/2023/05/ContentImageOpacless.png">
+                        <img class="rounded-t-lg h-full w-full" src="/wp-content/uploads/2023/05/ContentImageOpacless.png">
                     </div>
                     <div class="p-5 h-1/3">
                         <a href="#">
