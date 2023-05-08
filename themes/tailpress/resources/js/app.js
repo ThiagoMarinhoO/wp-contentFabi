@@ -1,4 +1,4 @@
-Navigation toggle
+// Navigation toggle
 window.addEventListener('load', function () {
       let main_navigation = document.querySelector('#primary-menu');
       document.querySelector('#primary-menu-toggle').addEventListener('click', function (e) {
@@ -16,12 +16,6 @@ jQuery(document).ready(function($) {
           $('#modal').removeClass('hidden');
       });
   });
-  
-  
-  
-  
-  
-  
   
 window.addEventListener('DOMContentLoaded', function () {
       let main_navigation = document.querySelector('#primaryNavContent');

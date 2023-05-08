@@ -7,7 +7,37 @@
   \*****************************/
 /***/ (() => {
 
-throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: C:\\valet\\fabianaabathnovo\\wp-content\\themes\\tailpress\\resources\\js\\app.js: Unexpected token (2:0)\n\n\u001b[0m \u001b[90m 1 |\u001b[39m \u001b[90m// Navigation toggle\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 2 |\u001b[39m \u001b[33m<<\u001b[39m\u001b[33m<<\u001b[39m\u001b[33m<<\u001b[39m\u001b[33m<\u001b[39m \u001b[33mHEAD\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m   |\u001b[39m \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 3 |\u001b[39m \u001b[90m// window.addEventListener('load', function () {\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 4 |\u001b[39m \u001b[90m//       let main_navigation = document.querySelector('#primary-menu');\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 5 |\u001b[39m \u001b[90m//       document.querySelector('#primary-menu-toggle').addEventListener('click', function (e) {\u001b[39m\u001b[0m\n    at instantiate (C:\\valet\\fabianaabathnovo\\wp-content\\themes\\tailpress\\node_modules\\@babel\\parser\\lib\\index.js:653:32)\n    at constructor (C:\\valet\\fabianaabathnovo\\wp-content\\themes\\tailpress\\node_modules\\@babel\\parser\\lib\\index.js:947:12)\n    at Parser.raise (C:\\valet\\fabianaabathnovo\\wp-content\\themes\\tailpress\\node_modules\\@babel\\parser\\lib\\index.js:3261:19)\n    at Parser.unexpected (C:\\valet\\fabianaabathnovo\\wp-content\\themes\\tailpress\\node_modules\\@babel\\parser\\lib\\index.js:3291:16)\n    at Parser.parseExprAtom (C:\\valet\\fabianaabathnovo\\wp-content\\themes\\tailpress\\node_modules\\@babel\\parser\\lib\\index.js:11259:16)\n    at Parser.parseExprSubscripts (C:\\valet\\fabianaabathnovo\\wp-content\\themes\\tailpress\\node_modules\\@babel\\parser\\lib\\index.js:10870:23)\n    at Parser.parseUpdate (C:\\valet\\fabianaabathnovo\\wp-content\\themes\\tailpress\\node_modules\\@babel\\parser\\lib\\index.js:10853:21)\n    at Parser.parseMaybeUnary (C:\\valet\\fabianaabathnovo\\wp-content\\themes\\tailpress\\node_modules\\@babel\\parser\\lib\\index.js:10829:23)\n    at Parser.parseMaybeUnaryOrPrivate (C:\\valet\\fabianaabathnovo\\wp-content\\themes\\tailpress\\node_modules\\@babel\\parser\\lib\\index.js:10667:61)\n    at Parser.parseExprOps (C:\\valet\\fabianaabathnovo\\wp-content\\themes\\tailpress\\node_modules\\@babel\\parser\\lib\\index.js:10672:23)\n    at Parser.parseMaybeConditional (C:\\valet\\fabianaabathnovo\\wp-content\\themes\\tailpress\\node_modules\\@babel\\parser\\lib\\index.js:10649:23)\n    at Parser.parseMaybeAssign (C:\\valet\\fabianaabathnovo\\wp-content\\themes\\tailpress\\node_modules\\@babel\\parser\\lib\\index.js:10610:21)\n    at Parser.parseExpressionBase (C:\\valet\\fabianaabathnovo\\wp-content\\themes\\tailpress\\node_modules\\@babel\\parser\\lib\\index.js:10564:23)\n    at C:\\valet\\fabianaabathnovo\\wp-content\\themes\\tailpress\\node_modules\\@babel\\parser\\lib\\index.js:10560:39\n    at Parser.allowInAnd (C:\\valet\\fabianaabathnovo\\wp-content\\themes\\tailpress\\node_modules\\@babel\\parser\\lib\\index.js:12250:16)\n    at Parser.parseExpression (C:\\valet\\fabianaabathnovo\\wp-content\\themes\\tailpress\\node_modules\\@babel\\parser\\lib\\index.js:10560:17)\n    at Parser.parseStatementContent (C:\\valet\\fabianaabathnovo\\wp-content\\themes\\tailpress\\node_modules\\@babel\\parser\\lib\\index.js:12678:23)\n    at Parser.parseStatementLike (C:\\valet\\fabianaabathnovo\\wp-content\\themes\\tailpress\\node_modules\\@babel\\parser\\lib\\index.js:12544:17)\n    at Parser.parseModuleItem (C:\\valet\\fabianaabathnovo\\wp-content\\themes\\tailpress\\node_modules\\@babel\\parser\\lib\\index.js:12521:17)\n    at Parser.parseBlockOrModuleBlockBody (C:\\valet\\fabianaabathnovo\\wp-content\\themes\\tailpress\\node_modules\\@babel\\parser\\lib\\index.js:13116:36)\n    at Parser.parseBlockBody (C:\\valet\\fabianaabathnovo\\wp-content\\themes\\tailpress\\node_modules\\@babel\\parser\\lib\\index.js:13109:10)\n    at Parser.parseProgram (C:\\valet\\fabianaabathnovo\\wp-content\\themes\\tailpress\\node_modules\\@babel\\parser\\lib\\index.js:12435:10)\n    at Parser.parseTopLevel (C:\\valet\\fabianaabathnovo\\wp-content\\themes\\tailpress\\node_modules\\@babel\\parser\\lib\\index.js:12425:25)\n    at Parser.parse (C:\\valet\\fabianaabathnovo\\wp-content\\themes\\tailpress\\node_modules\\@babel\\parser\\lib\\index.js:14245:10)\n    at parse (C:\\valet\\fabianaabathnovo\\wp-content\\themes\\tailpress\\node_modules\\@babel\\parser\\lib\\index.js:14286:38)\n    at parser (C:\\valet\\fabianaabathnovo\\wp-content\\themes\\tailpress\\node_modules\\@babel\\core\\lib\\parser\\index.js:41:34)\n    at parser.next (<anonymous>)\n    at normalizeFile (C:\\valet\\fabianaabathnovo\\wp-content\\themes\\tailpress\\node_modules\\@babel\\core\\lib\\transformation\\normalize-file.js:64:38)\n    at normalizeFile.next (<anonymous>)\n    at run (C:\\valet\\fabianaabathnovo\\wp-content\\themes\\tailpress\\node_modules\\@babel\\core\\lib\\transformation\\index.js:21:50)\n    at run.next (<anonymous>)\n    at transform (C:\\valet\\fabianaabathnovo\\wp-content\\themes\\tailpress\\node_modules\\@babel\\core\\lib\\transform.js:22:41)\n    at transform.next (<anonymous>)\n    at step (C:\\valet\\fabianaabathnovo\\wp-content\\themes\\tailpress\\node_modules\\gensync\\index.js:261:32)\n    at C:\\valet\\fabianaabathnovo\\wp-content\\themes\\tailpress\\node_modules\\gensync\\index.js:273:13\n    at async.call.result.err.err (C:\\valet\\fabianaabathnovo\\wp-content\\themes\\tailpress\\node_modules\\gensync\\index.js:223:11)");
+// Navigation toggle
+window.addEventListener('load', function () {
+  var main_navigation = document.querySelector('#primary-menu');
+  document.querySelector('#primary-menu-toggle').addEventListener('click', function (e) {
+    e.preventDefault();
+    main_navigation.classList.toggle('hidden');
+  });
+});
+jQuery(document).ready(function ($) {
+  $('#modal').on('click', function () {
+    $(this).addClass('hidden');
+    $('#player').attr('src', '');
+  });
+  $('.open-video').on('click', function () {
+    $('#modal').removeClass('hidden');
+  });
+});
+window.addEventListener('DOMContentLoaded', function () {
+  var main_navigation = document.querySelector('#primaryNavContent');
+  document.querySelector('#hamburguerButton').addEventListener('click', function (e) {
+    e.preventDefault();
+    main_navigation.classList.toggle('hidden');
+  });
+});
+window.addEventListener('DOMContentLoaded', function () {
+  var main_navigation = document.querySelector('#secondaryNavContent');
+  document.querySelector('#secondaryHamburguerButton').addEventListener('click', function (e) {
+    e.preventDefault();
+    main_navigation.classList.toggle('hidden');
+  });
+});
 
 /***/ }),
 
