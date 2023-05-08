@@ -48,6 +48,9 @@
     white-space: nowrap;
     border-width: 0
 }
+.fixed {
+    position: fixed
+}
 .absolute {
     position: absolute
 }
@@ -74,6 +77,9 @@
 }
 .top-full {
     top: 100%
+}
+.right-5 {
+    right: 1.25rem
 }
 .-z-50 {
     z-index: -50
@@ -190,6 +196,12 @@
 .mb-\[60px\] {
     margin-bottom: 60px
 }
+.mt-5 {
+    margin-top: 1.25rem
+}
+.ml-3 {
+    margin-left: 0.75rem
+}
 .line-clamp-2 {
     overflow: hidden;
     display: -webkit-box;
@@ -252,6 +264,9 @@
 }
 .h-2\/3 {
     height: 66.666667%
+}
+.h-screen {
+    height: 100vh
 }
 .min-h-full {
     min-height: 100%
@@ -602,6 +617,9 @@
 .p-8 {
     padding: 2rem
 }
+.p-2 {
+    padding: 0.5rem
+}
 .px-16 {
     padding-left: 4rem;
     padding-right: 4rem
@@ -908,6 +926,47 @@ body {
 .wp-block[data-align=full] {
     max-width: 100%
 }
+@media (min-width: 960px) {
+    .lg\:container {
+        width: 100%;
+        padding-right: 1rem;
+        padding-left: 1rem
+    }
+    @media (min-width: 480px) {
+        .lg\:container {
+            max-width: 480px
+        }
+    }
+    @media (min-width: 600px) {
+        .lg\:container {
+            max-width: 600px;
+            padding-right: 2rem;
+            padding-left: 2rem
+        }
+    }
+    @media (min-width: 782px) {
+        .lg\:container {
+            max-width: 782px
+        }
+    }
+    @media (min-width: 960px) {
+        .lg\:container {
+            max-width: 960px;
+            padding-right: 0rem;
+            padding-left: 0rem
+        }
+    }
+    @media (min-width: 1280px) {
+        .lg\:container {
+            max-width: 1280px
+        }
+    }
+    @media (min-width: 1440px) {
+        .lg\:container {
+            max-width: 1440px
+        }
+    }
+}
 .hover\:bg-blue-800:hover {
     --tw-bg-opacity: 1;
     background-color: rgb(30 64 175 / var(--tw-bg-opacity))
@@ -948,6 +1007,11 @@ body {
     --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(4px + var(--tw-ring-offset-width)) var(--tw-ring-color);
     box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)
 }
+.focus\:ring-2:focus {
+    --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+    --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+    box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)
+}
 .focus\:ring-blue-300:focus {
     --tw-ring-opacity: 1;
     --tw-ring-color: rgb(147 197 253 / var(--tw-ring-opacity))
@@ -963,6 +1027,10 @@ body {
 .focus\:ring-green-300:focus {
     --tw-ring-opacity: 1;
     --tw-ring-color: rgb(134 239 172 / var(--tw-ring-opacity))
+}
+.focus\:ring-gray-200:focus {
+    --tw-ring-opacity: 1;
+    --tw-ring-color: rgb(229 231 235 / var(--tw-ring-opacity))
 }
 :is([dir="rtl"] .rtl\:-scale-x-100) {
     --tw-scale-x: -1;
@@ -1052,11 +1120,20 @@ body {
     .lg\:mb-20 {
         margin-bottom: 5rem
     }
+    .lg\:mt-0 {
+        margin-top: 0px
+    }
+    .lg\:mr-6 {
+        margin-right: 1.5rem
+    }
     .lg\:block {
         display: block
     }
     .lg\:flex {
         display: flex
+    }
+    .lg\:hidden {
+        display: none
     }
     .lg\:w-1\/3 {
         width: 33.333333%
@@ -1089,6 +1166,9 @@ body {
     .lg\:max-w-6xl {
         max-width: 72rem
     }
+    .lg\:max-w-screen-xl {
+        max-width: 1280px
+    }
     .lg\:grid-cols-2 {
         grid-template-columns: repeat(2, minmax(0, 1fr))
     }
@@ -1097,6 +1177,9 @@ body {
     }
     .lg\:flex-row {
         flex-direction: row
+    }
+    .lg\:items-end {
+        align-items: flex-end
     }
     .lg\:items-stretch {
         align-items: stretch
@@ -1116,6 +1199,19 @@ body {
         --tw-space-x-reverse: 0;
         margin-right: calc(1rem * var(--tw-space-x-reverse));
         margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)))
+    }
+    .lg\:space-x-16 > :not([hidden]) ~ :not([hidden]) {
+        --tw-space-x-reverse: 0;
+        margin-right: calc(4rem * var(--tw-space-x-reverse));
+        margin-left: calc(4rem * calc(1 - var(--tw-space-x-reverse)))
+    }
+    .lg\:space-x-8 > :not([hidden]) ~ :not([hidden]) {
+        --tw-space-x-reverse: 0;
+        margin-right: calc(2rem * var(--tw-space-x-reverse));
+        margin-left: calc(2rem * calc(1 - var(--tw-space-x-reverse)))
+    }
+    .lg\:bg-transparent {
+        background-color: transparent
     }
     .lg\:p-12 {
         padding: 3rem
@@ -1156,6 +1252,10 @@ body {
         padding-top: 3rem;
         padding-bottom: 3rem
     }
+    .lg\:py-3 {
+        padding-top: 0.75rem;
+        padding-bottom: 0.75rem
+    }
     .lg\:pt-1 {
         padding-top: 0.25rem
     }
@@ -1186,6 +1286,10 @@ body {
     }
     .lg\:text-xl {
         font-size: 1.25rem
+    }
+    .lg\:text-white {
+        --tw-text-opacity: 1;
+        color: rgb(255 255 255 / var(--tw-text-opacity))
     }
 }
 @media (min-width: 1280px) {

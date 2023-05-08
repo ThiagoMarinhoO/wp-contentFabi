@@ -1,4 +1,4 @@
-<section class="pt-20 pb-10 lg:pt-[80px] lg:pb-20">
+<section class="bg-gray-50 pt-20 pb-10 lg:pt-[80px] lg:pb-20">
   <div class="container lg:max-w-7xl mx-auto">
     <div class="-mx-4 flex flex-wrap justify-center">
       <div class="w-full px-4">

@@ -1,12 +1,12 @@
 <div class="min-h-screen py-16 bg-gray-50">
-    <div class="flex">
-        <div class="w-1/4">
+    <div class="flex flex-col lg:flex-row space-y-8 lg:space-y-0">
+        <div class="lg:w-1/4">
             <img src="http://fabianaabath.test/wp-content/uploads/2023/05/FZP_1496-min-scaled.jpg" alt="" class="rounded-r-md">
         </div>
-        <div class="w-3/4 px-16">
+        <div class="lg:w-3/4 px-5 lg:px-16"> 
             <span class="font-semibold text-green-800 mb-4">Sobre mim</span>
             <h1 class="text-5xl font-bold mb-10">Minha história e como ela foi transformada pelo processo de Orientação de Carreira.</h1>
-            <div class="twoColumnParagraphs">
+            <div class="lg:twoColumnParagraphs">
                 <p>Fabi Abath, uma apaixonada por ajudar as pessoas a transformarem suas vidas, através do autoconhecimento e da melhora de sua relação com o trabalho. Na vida pessoal, eu amo estar com minha família e meus amigos, e sou viciada em livros.</p>
                 <p class="mt-7">Minha missão é ajudar pessoas a encontrarem uma profissão (ou carreira) que esteja alinhada aos seus talentos e estilo de vida. A contribuição entrego para o mundo, é de um trabalho que transforma a vida das pessoas, permitindo que elas se sintam felizes todos os dias (não somente aos finais de semana).</p>
                 <p class="mt-7">Hoje eu tenho clareza de que quanto mais pessoas se propuserem a fazer esse trabalho, mais profissionais serão ajudados. Por isso, também ensino outros Orientadores de Carreira a executarem seu trabalho com excelência, através de cursos e mentorias.</p>
