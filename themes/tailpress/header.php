@@ -21,8 +21,8 @@
 
 		<header class="relative">
 			<nav class="bg-white">
-				<div class="flex flex-wrap justify-between items-center py-4 px-5 lg:px-8">
-					<div class="flex items-center gap-5">
+				<div class="flex flex-wrap justify-center lg:justify-between items-center py-4 px-5 lg:px-8">
+					<div class="hidden lg:flex items-center gap-5">
 						<a href="" class="hover:underline">
 							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter text-white" viewBox="0 0 16 16">
 								<path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
@@ -39,10 +39,10 @@
 							</svg>
 						</a>
 					</div>
-					<a href="<?php echo get_bloginfo( 'url' );?>" class="flex items-center">
+					<a href="<?php echo home_url();?>" class="flex items-center">
 						<img src="/wp-content/uploads/2023/05/Identidade-Horizontal-reflexo-azul-1.png" class="h-9"/>
 					</a>
-					<div class="flex items-center gap-5">
+					<div class="hidden lg:flex items-center gap-5">
 						<a href="" class="hover:underline">
 							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter text-gray-500" viewBox="0 0 16 16">
 								<path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
@@ -59,20 +59,24 @@
 							</svg>
 						</a>
 					</div>
+					<button id="hamburguerButton" type="button" class="inline-flex lg:hidden items-center absolute right-5 p-2 ml-3 text-sm text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200">
+						<span class="sr-only">Open main menu</span>
+						<svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+					</button>
 				</div>
 			</nav>
-			<nav class="w-full mx-auto absolute top-full">
-				<div class="max-w-screen-xl px-4 py-3 mx-auto">
+			<nav id="primaryNavContent" class="hidden bg-white lg:bg-transparent absolute top-full w-full lg:block">
+				<div class="px-4 py-3 mx-auto">
 				<?php
 						wp_nav_menu(
 							array(
 								'container_id'    => 'primary-menu',
 								'container_class' => 'flex items-center justify-center',
-								'menu_class'      => 'flex flex-row font-medium mt-0 mr-6 space-x-8 text-sm',
+								'menu_class'      => 'flex flex-col lg:flex-row font-medium space-y-5 lg:space-y-0 lg:mt-0 lg:mr-6 lg:space-x-8',
 								'theme_location'  => 'primary',
-								'li_class'        => 'lg:mx-4',
+								'li_class'        => 'text-center m-0 lg:mx-4',
 								'fallback_cb'     => false,
-								'add_a_class'     => 'text-white hover:underline',
+								'add_a_class'     => 'lg:text-white hover:underline text-sm',
 							)
 						);
 					?>
@@ -82,10 +86,10 @@
 
 	<?php } else {?>
 
-		<header class="">
+		<header class="relative">
 			<nav class="bg-white">
-				<div class="flex flex-wrap justify-between items-center py-4 px-5 lg:px-8">
-					<div class="flex items-center gap-5">
+				<div class="flex flex-wrap justify-center lg:justify-between items-center py-4 px-5 lg:px-8">
+					<div class="hidden lg:flex items-center gap-5">
 						<a href="" class="hover:underline">
 							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter text-white" viewBox="0 0 16 16">
 								<path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
@@ -105,7 +109,7 @@
 					<a href="<?php echo get_bloginfo( 'url' );?>" class="flex items-center">
 						<img src="/wp-content/uploads/2023/05/Identidade-Horizontal-reflexo-azul-1.png" class="h-9"/>
 					</a>
-					<div class="flex items-center gap-5">
+					<div class="hidden lg:flex items-center gap-5">
 						<a href="" class="hover:underline">
 							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter text-gray-500" viewBox="0 0 16 16">
 								<path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
@@ -122,20 +126,24 @@
 							</svg>
 						</a>
 					</div>
+					<button id="secondaryHamburguerButton" type="button" class="inline-flex lg:hidden items-center absolute right-5 p-2 ml-3 text-sm text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200">
+						<span class="sr-only">Open main menu</span>
+						<svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+					</button>
 				</div>
 			</nav>
-			<nav class="w-full mx-auto bg-white border-t border-gray-100">
-				<div class="max-w-screen-xl px-4 py-3 mx-auto">
+			<nav id="secondaryNavContent" class="hidden w-full mx-auto bg-white border-t border-gray-100 absolute top-full lg:block">
+				<div class="max-w-screen-xl px-4 py-6 lg:py-3 mx-auto">
 				<?php
 						wp_nav_menu(
 							array(
 								'container_id'    => 'primary-menu',
 								'container_class' => 'flex items-center justify-center',
-								'menu_class'      => 'flex flex-row font-medium mt-0 mr-6 space-x-8 text-sm',
+								'menu_class'      => 'flex flex-col lg:flex-row font-medium lg:mt-0 lg:mr-6 lg:space-x-8 space-y-5 lg:space-y-0',
 								'theme_location'  => 'primary',
-								'li_class'        => 'lg:mx-4',
+								'li_class'        => 'text-center lg:mx-4',
 								'fallback_cb'     => false,
-								'add_a_class'     => 'hover:underline',
+								'add_a_class'     => 'hover:underline text-sm',
 							)
 						);
 					?>
