@@ -29,7 +29,35 @@ jQuery(document).ready(function ($) {
       }
     }
   });
+  $('button').click(function () {
+    $(this).next("p").toggleClass('hidden');
+    if ($(this).next("p").hasClass('hidden')) {
+      $(this).find('svg').attr('class', 'w-6 h-6');
+    } else {
+      $(this).find('svg').attr('class', 'w-6 h-6 transform rotate-45');
+      $(this).next("p").removeClass('opacity-0').addClass('opacity-100').fadeIn();
+    }
+  });
+  var mySwiper = new Swiper('.swiper', {
+    slidesPerView: 4,
+    spaceBetween: 10,
+    loop: true,
+    autoplay: {
+      delay: 5000
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev'
+    }
+    // breakpoints: {
+    //       767: {
+    //       slidesPerView: 1,
+    //       spaceBetween: 0,
+    //       },
+    // },
+  });
 });
+
 window.addEventListener('DOMContentLoaded', function () {
   var _document$querySelect;
   var main_navigation = document.querySelector('#primaryNavContent');
@@ -45,25 +73,16 @@ window.addEventListener('DOMContentLoaded', function () {
   (_document$querySelect2 = document.querySelector('#secondaryHamburguerButton')) === null || _document$querySelect2 === void 0 ? void 0 : _document$querySelect2.addEventListener('click', function (e) {
     e.preventDefault();
     main_navigation.classList.toggle('hidden');
-    
-  var swiper = new Swiper('.swiper', {
-    direction: 'horizontal',
-    loop: true,
-    slidesPerView: 4,
-    spaceBetween: 10,
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev'
-    }
-  });
-  $('button').click(function () {
-    $(this).next("p").toggleClass('hidden');
-    if ($(this).next("p").hasClass('hidden')) {
-      $(this).find('svg').attr('class', 'w-6 h-6');
-    } else {
-      $(this).find('svg').attr('class', 'w-6 h-6 transform rotate-45');
-      $(this).next("p").removeClass('opacity-0').addClass('opacity-100').fadeIn();
-    }
+    var swiper = new Swiper('.swiper', {
+      direction: 'horizontal',
+      loop: true,
+      slidesPerView: 4,
+      spaceBetween: 10,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev'
+      }
+    });
   });
 });
 

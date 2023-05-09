@@ -31,6 +31,25 @@ jQuery(document).ready(function($) {
               $(this).next("p").removeClass('opacity-0').addClass('opacity-100').fadeIn();
         }
       });
+
+      var mySwiper = new Swiper('.swiper', {
+            slidesPerView: 4,
+            spaceBetween: 10,
+            loop: true,
+            autoplay: {
+                  delay: 5000,
+            },
+            navigation: {
+                  nextEl: '.swiper-button-next',
+                  prevEl: '.swiper-button-prev',
+            },
+            // breakpoints: {
+            //       767: {
+            //       slidesPerView: 1,
+            //       spaceBetween: 0,
+            //       },
+            // },
+      });
 });
 
 window.addEventListener('DOMContentLoaded', function () {

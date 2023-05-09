@@ -123,47 +123,47 @@ $deps = new WP_Query($args);
         <div class="grid grid-cols-2 gap-8">
             <div class="col-span-2 flex flex-col justify-between">
                 <div class="flex justify-between">
-                    <div class="w-1/2">
+                    <div class="w-1/2 px-32">
                         <div class="w-full flex text-center flex-col justify-center">
-                            <img src="/wp-content/themes/tailpress/resources/images/suitcase1.png" class="w-20 mx-auto">
-                            <h2 class="my-5 font-bold text-2xl">Desenvolvimento profissional</h2>
-                            <p>para pessoas que estão se sentindo estagnadas profissionalmente e precisam de ajuda para definir o próximo passo de carreira e desenhar o plano de desenvolvimento profissional.</p>
+                            <img src="/wp-content/themes/tailpress/resources/images/dado1.png" class="w-20 mx-auto">
+                            <h2 class="my-5 font-bold text-2xl">Realizar atendimentos</h2>
+                            <p>Realizar atendimentos individuais de Orientação de Carreira com segurança.</p>
                         </div>
                     </div>
-                    <div class="w-1/2">
+                    <div class="w-1/2 px-32">
                         <div class="w-full flex text-center flex-col justify-center">
-                            <img src="/wp-content/themes/tailpress/resources/images/suitcase1.png" class="w-20 mx-auto">
-                            <h2 class="my-5 font-bold text-2xl">Desenvolvimento profissional</h2>
-                            <p>para pessoas que estão se sentindo estagnadas profissionalmente e precisam de ajuda para definir o próximo passo de carreira e desenhar o plano de desenvolvimento profissional.</p>
+                            <img src="/wp-content/themes/tailpress/resources/images/dado2.png" class="w-20 mx-auto">
+                            <h2 class="my-5 font-bold text-2xl">Trabalhar com desenvolvimento humano</h2>
+                            <p>Trabalhar com desenvolvimento humano, sem precisar estar no RH de uma empresa.</p>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col-span-2 flex flex-col justify-between">
                 <div class="flex justify-center">
-                    <div class="w-1/2">
+                    <div class="w-1/2 px-32">
                         <div class="w-full flex text-center flex-col justify-center">
-                            <img src="/wp-content/themes/tailpress/resources/images/suitcase1.png" class="w-20 mx-auto">
-                            <h2 class="my-5 font-bold text-2xl">Desenvolvimento profissional</h2>
-                            <p>para pessoas que estão se sentindo estagnadas profissionalmente e precisam de ajuda para definir o próximo passo de carreira e desenhar o plano de desenvolvimento profissional.</p>
+                            <img src="/wp-content/themes/tailpress/resources/images/dado3.png" class="w-20 mx-auto">
+                            <h2 class="my-5 font-bold text-2xl">Mais Flexibilidade</h2>
+                            <p>Ter mais flexibilidade de autonomia profissional.</p>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col-span-2 flex flex-col justify-between">
                 <div class="flex justify-between">
-                    <div class="w-1/2">
+                    <div class="w-1/2 px-32">
                         <div class="w-full flex text-center flex-col justify-center">
-                            <img src="/wp-content/themes/tailpress/resources/images/suitcase1.png" class="w-20 mx-auto">
-                            <h2 class="my-5 font-bold text-2xl">Desenvolvimento profissional</h2>
-                            <p>para pessoas que estão se sentindo estagnadas profissionalmente e precisam de ajuda para definir o próximo passo de carreira e desenhar o plano de desenvolvimento profissional.</p>
+                            <img src="/wp-content/themes/tailpress/resources/images/dado4.png" class="w-20 mx-auto">
+                            <h2 class="my-5 font-bold text-2xl">Atender adultos com as seguintes demandas</h2>
+                            <p>transição de carreira, desenvolvimento profissional, planejamento de carreira, desenvolvimento de líderes e orientação para aposentadoria.</p>
                         </div>
                     </div>
-                    <div class="w-1/2">
+                    <div class="w-1/2 px-32">
                         <div class="w-full flex text-center flex-col justify-center">
-                            <img src="/wp-content/themes/tailpress/resources/images/suitcase1.png" class="w-20 mx-auto">
-                            <h2 class="my-5 font-bold text-2xl">Desenvolvimento profissional</h2>
-                            <p>para pessoas que estão se sentindo estagnadas profissionalmente e precisam de ajuda para definir o próximo passo de carreira e desenhar o plano de desenvolvimento profissional.</p>
+                            <img src="/wp-content/themes/tailpress/resources/images/dado5.png" class="w-20 mx-auto">
+                            <h2 class="my-5 font-bold text-2xl">Estruturar sua transição profissional</h2>
+                            <p>para trabalhar com Orientação de Carreira, do seu jeito, sabendo: precificar e cobrar seu trabalho, vender aquilo que faz.</p>
                         </div>
                     </div>
                 </div>
