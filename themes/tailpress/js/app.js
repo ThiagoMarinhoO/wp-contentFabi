@@ -29,7 +29,7 @@ jQuery(document).ready(function ($) {
       }
     }
   });
-  $('button').click(function () {
+  $('.faq').click(function () {
     $(this).next("p").toggleClass('hidden');
     if ($(this).next("p").hasClass('hidden')) {
       $(this).find('svg').attr('class', 'w-6 h-6');
@@ -39,8 +39,8 @@ jQuery(document).ready(function ($) {
     }
   });
   var mySwiper = new Swiper('.swiper', {
-    slidesPerView: 4,
-    spaceBetween: 10,
+    slidesPerView: 1,
+    spaceBetween: 0,
     loop: true,
     autoplay: {
       delay: 5000
@@ -48,16 +48,23 @@ jQuery(document).ready(function ($) {
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev'
+    },
+    breakpoints: {
+      767: {
+        slidesPerView: 4,
+        spaceBetween: 10
+      }
     }
-    // breakpoints: {
-    //       767: {
-    //       slidesPerView: 1,
-    //       spaceBetween: 0,
-    //       },
-    // },
+  });
+  var swiper = new Swiper('.swiper-deps', {
+    slidesPerView: 'auto',
+    spaceBetween: 20,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev'
+    }
   });
 });
-
 window.addEventListener('DOMContentLoaded', function () {
   var _document$querySelect;
   var main_navigation = document.querySelector('#primaryNavContent');

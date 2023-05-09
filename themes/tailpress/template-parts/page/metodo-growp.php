@@ -1,10 +1,31 @@
 <?php
-$args = [
+$videos = array(
     'post_type' => 'depoimentos',
-    'posts_per_page' => -1
-];
+    'posts_per_page' => -1,
+    'tax_query' => array(
+        array(
+            'taxonomy' => 'categorias',
+            'field' => 'tag_ID',
+            'terms' => 5
+        )
+    )
+);
 
-$deps = new WP_Query($args);
+$deps = new WP_Query($videos);
+
+$depoimentos = array(
+    'post_type' => 'depoimentos',
+    'posts_per_page' => -1,
+    'tax_query' => array(
+        array(
+            'taxonomy' => 'categorias',
+            'field' => 'tag_ID',
+            'terms' => 6
+        )
+    )
+);
+
+$deps_query = new WP_Query($depoimentos);
 ?>
 <section class="bg-gray-900">
     <div class="bg-left-bottom bg-no-repeat bg-[url('/wp-content/themes/tailpress/resources/images/1478sembg.png')] bg-contain bg-blend-multiply">
@@ -455,7 +476,6 @@ $deps = new WP_Query($args);
     </div>
 </section>
 
-<!-- ADICIONAR SWIPER E MAIS DEPOIMENTOS -->
 <section class="bg-white">
     <div class="container lg:max-w-7xl px-6 py-10 mx-auto">
         <div class="mt-6 md:flex md:items-center md:justify-between">
@@ -464,64 +484,32 @@ $deps = new WP_Query($args);
                     Depoimentos
                 </h1>
             </div>
-
-            <div class="flex justify-between mt-8 md:mt-0">
-                <button title="left arrow" class="p-2 mx-3 text-gray-800 transition-colors duration-300 border rounded-full rtl:-scale-x-100 dark:text-gray-200 dark:hover:bg-gray-800 dark:border-gray-700 hover:bg-gray-100">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
-                    </svg>
-                </button>
-
-                <button title="right arrow" class="p-2 text-gray-800 transition-colors duration-300 border rounded-full rtl:-scale-x-100 dark:text-gray-200 dark:hover:bg-gray-800 dark:border-gray-700 hover:bg-gray-100">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
-                    </svg>
-                </button>
-            </div>
         </div>
-
-        <section class="grid grid-cols-1 gap-8 mt-8 xl:mt-12 lg:grid-cols-2 xl:grid-cols-3">
-            <div class="p-8 shadow-md rounded-lg flex flex-col justify-between">
-                <p class="leading-loose text-gray-500">
-                    “Fabi, seu curso é completo! Metodologia, ferramentas, manejo de condução. Além, de todos os bônus oferecidos de tamanha importância, como: organização, parte burocrática de pensar os atendimentos, mídias, parte comercial etc. Quanto a você, sua forma de ensinar, contém muita didática e simpatia. O que nos motivou durante todo o curso. Muito obrigada pela experiência. Era tudo que faltava para que os atendimentos sigam mais confiantes daqui para frente!”.
-                </p>
-
-                <div class="mt-8 -mx-2">
-                    <div class="mx-2">
-                        <h1 class="font-semibold text-gray-800">Alessandra Mauro Prado</h1>
-                        <span class="text-sm text-gray-500">@psicologia.in.focus</span>
-                    </div>
+        <?php if ( $deps_query->have_posts() ) : ?>
+            <div class="swiper-deps relative pt-10">
+                <div class="swiper-wrapper">
+                    <?php while ( $deps_query->have_posts() ) : $deps_query->the_post(); ?>
+                        <div class="p-8 shadow-md rounded-lg swiper-slide max-w-sm lg:w-1/3">
+                            <p class="leading-loose text-gray-500">
+                                <?php echo the_content()?>
+                            </p>
+                            <div class="mt-8 -mx-2">
+                                <div class="mx-2">
+                                    <h1 class="font-semibold text-gray-800"><?php echo the_title() ?></h1>
+                                    <span class="text-sm text-gray-500"><?php echo get_field('rede_social' , get_the_ID())?></span>
+                                </div>
+                            </div>
+                        </div>
+                    <?php endwhile ?>
+                </div>
+                <div class="pagination-deps flex justify-between fixed z-50 w-28 right-0 top-0 absolute">
+                    <div class="swiper-button-prev block"></div>
+                    <div class="swiper-button-next block"></div>
                 </div>
             </div>
-
-            <div class="p-8 shadow-md rounded-lg flex flex-col justify-between">
-                <p class="leading-loose text-gray-500">
-                    “Eu amei cada detalhe do curso. Esse foi o primeiro curso que fiz em OC e o método me deu segurança para começar a atuar. Tive um suporte incrível e aprendi muito a estruturar meu negócio em OC. Tenho recomendado o curso para várias amigas e sinto que meu processo de transição dos atendimentos clínicos em psicologia para atuação em OC será bem estruturado a partir do meu plano de carreira que irá orientar os passos que preciso percorrer para alcançar meus objetivos profissionais. Só tenho a agradecer!!!”.
-                </p>
-
-                <div class="mt-8 -mx-2">
-                    <div class="mx-2">
-                        <h1 class="font-semibold text-gray-800">Renata Gonçalves de Britto</h1>
-                        <span class="text-sm text-gray-500">@psicologarenatabritto</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="p-8 shadow-md rounded-lg flex flex-col justify-between">
-                <p class="leading-loose text-gray-500">
-                    “Um curso completo que traz como diferencial, a preocupação não só com a base da orientação, mas principalmente como faremos posteriormente a formação, que é geralmente o que faz o formado sentir medo de começar e passar achar que não está preparado e procurar outros cursos, e não sair do ciclo da insegurança. Já é sabido que a parte do manejo, comercial, marketing, branding e o digital precisam andar juntos.”.
-                </p>
-
-                <div class="mt-8 -mx-2">
-                    <div class="mx-2">
-                        <h1 class="font-semibold text-gray-800">Laís Santiago</h1>
-                        <span class="text-sm text-gray-500">@laissantiago98</span>
-                    </div>
-                </div>
-            </div>
+        <?php endif ?>
         </section>
     </div>
-</section>
 
 <section class="px-5 py-16 lg:my-16 lg:px-16">
     <div class="mx-auto flex flex-col lg:flex-row items-center space-y-8 gap-16">
@@ -620,7 +608,7 @@ $deps = new WP_Query($args);
         <div class="mt-8 space-y-8 lg:mt-16">
 
             <div class="p-8 bg-gray-100 rounded-lg">
-                <button class="flex items-center justify-between rounded-md px-4 py-2 text-gray-700 w-full">
+                <button class="flex items-center justify-between rounded-md px-4 py-2 text-gray-700 w-full faq">
                     
                     <h1 class="font-semibold text-gray-700">Quanto custa ?</h1>
 
@@ -637,7 +625,7 @@ $deps = new WP_Query($args);
             </div>
 
             <div class="p-8 bg-gray-100 rounded-lg">
-                <button class="flex items-center justify-between rounded-md px-4 py-2 text-gray-700 w-full">
+                <button class="flex items-center justify-between rounded-md px-4 py-2 text-gray-700 w-full faq">
                     
                     <h1 class="font-semibold text-gray-700">O certificado é reconhecido pelo Ministério da Educação?</h1>
 
@@ -654,7 +642,7 @@ $deps = new WP_Query($args);
             </div>
 
             <div class="p-8 bg-gray-100 rounded-lg">
-                <button class="flex items-center justify-between rounded-md px-4 py-2 text-gray-700 w-full">
+                <button class="flex items-center justify-between rounded-md px-4 py-2 text-gray-700 w-full faq">
                     
                     <h1 class="font-semibold text-gray-700">Tem pré-requisito?</h1>
 
@@ -671,7 +659,7 @@ $deps = new WP_Query($args);
             </div>
 
             <div class="p-8 bg-gray-100 rounded-lg">
-                <button class="flex items-center justify-between rounded-md px-4 py-2 text-gray-700 w-full">
+                <button class="flex items-center justify-between rounded-md px-4 py-2 text-gray-700 w-full faq">
                     
                     <h1 class="font-semibold text-gray-700">Terá aulas ao vivo ou todas as aulas estão gravadas?</h1>
 
@@ -688,7 +676,7 @@ $deps = new WP_Query($args);
             </div>
 
             <div class="p-8 bg-gray-100 rounded-lg">
-                <button class="flex items-center justify-between rounded-md px-4 py-2 text-gray-700 w-full">
+                <button class="flex items-center justify-between rounded-md px-4 py-2 text-gray-700 w-full faq">
                     
                     <h1 class="font-semibold text-gray-700">Tem material complementar?</h1>
 
@@ -705,7 +693,7 @@ $deps = new WP_Query($args);
             </div>
 
             <div class="p-8 bg-gray-100 rounded-lg">
-                <button class="flex items-center justify-between rounded-md px-4 py-2 text-gray-700 w-full">
+                <button class="flex items-center justify-between rounded-md px-4 py-2 text-gray-700 w-full faq">
                     
                     <h1 class="font-semibold text-gray-700">Quanto tempo tem acesso?</h1>
 
@@ -722,7 +710,7 @@ $deps = new WP_Query($args);
             </div>
 
             <div class="p-8 bg-gray-100 rounded-lg">
-                <button class="flex items-center justify-between rounded-md px-4 py-2 text-gray-700 w-full">
+                <button class="flex items-center justify-between rounded-md px-4 py-2 text-gray-700 w-full faq">
                     
                     <h1 class="font-semibold text-gray-700">Não sou psicólogo, posso fazer o curso?</h1>
 
@@ -739,7 +727,7 @@ $deps = new WP_Query($args);
             </div>
 
             <div class="p-8 bg-gray-100 rounded-lg">
-                <button class="flex items-center justify-between rounded-md px-4 py-2 text-gray-700 w-full">
+                <button class="flex items-center justify-between rounded-md px-4 py-2 text-gray-700 w-full faq">
                     
                     <h1 class="font-semibold text-gray-700">Além do atendimento de adultos, gostaria de atender adolescentes. Vou aprender a fazer isso no Método GROWP?</h1>
 
@@ -756,7 +744,7 @@ $deps = new WP_Query($args);
             </div>
 
             <div class="p-8 bg-gray-100 rounded-lg">
-                <button class="flex items-center justify-between rounded-md px-4 py-2 text-gray-700 w-full">
+                <button class="flex items-center justify-between rounded-md px-4 py-2 text-gray-700 w-full faq">
                     
                     <h1 class="font-semibold text-gray-700">Ainda não me formei na faculdade, posso fazer o curso?</h1>
 
@@ -773,7 +761,7 @@ $deps = new WP_Query($args);
             </div>
 
             <div class="p-8 bg-gray-100 rounded-lg">
-                <button class="flex items-center justify-between rounded-md px-4 py-2 text-gray-700 w-full">
+                <button class="flex items-center justify-between rounded-md px-4 py-2 text-gray-700 w-full faq">
                     
                     <h1 class="font-semibold text-gray-700">Vou aprender a fazer atendimentos on-line e presenciais?</h1>
 
@@ -790,7 +778,7 @@ $deps = new WP_Query($args);
             </div>
 
             <div class="p-8 bg-gray-100 rounded-lg">
-                <button class="flex items-center justify-between rounded-md px-4 py-2 text-gray-700 w-full">
+                <button class="flex items-center justify-between rounded-md px-4 py-2 text-gray-700 w-full faq">
                     
                     <h1 class="font-semibold text-gray-700">Como saber que conseguirei acompanhar as aulas?</h1>
 
@@ -807,7 +795,7 @@ $deps = new WP_Query($args);
             </div>
 
             <div class="p-8 bg-gray-100 rounded-lg">
-                <button class="flex items-center justify-between rounded-md px-4 py-2 text-gray-700 w-full">
+                <button class="flex items-center justify-between rounded-md px-4 py-2 text-gray-700 w-full faq">
                     
                     <h1 class="font-semibold text-gray-700">Tem suporte ao aluno?</h1>
 
@@ -824,7 +812,7 @@ $deps = new WP_Query($args);
             </div>
 
             <div class="p-8 bg-gray-100 rounded-lg">
-                <button class="flex items-center justify-between rounded-md px-4 py-2 text-gray-700 w-full">
+                <button class="flex items-center justify-between rounded-md px-4 py-2 text-gray-700 w-full faq">
                     
                     <h1 class="font-semibold text-gray-700">Quantas horas de curso?</h1>
 
@@ -841,7 +829,7 @@ $deps = new WP_Query($args);
             </div>
 
             <div class="p-8 bg-gray-100 rounded-lg">
-                <button class="flex items-center justify-between rounded-md px-4 py-2 text-gray-700 w-full">
+                <button class="flex items-center justify-between rounded-md px-4 py-2 text-gray-700 w-full faq">
                     
                     <h1 class="font-semibold text-gray-700">Onde as aulas gravadas serão disponibilizadas?</h1>
 
