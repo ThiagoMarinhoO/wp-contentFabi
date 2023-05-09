@@ -165,6 +165,9 @@
 .top-40 {
     top: 10rem !important
 }
+.top-5 {
+    top: 1.25rem
+}
 .-z-50 {
     z-index: -50 !important
 }
@@ -413,6 +416,21 @@
 }
 .max-w-7xl {
     max-width: 80rem !important
+}
+.w-1\/12 {
+    width: 8.333333%
+}
+.w-40 {
+    width: 10rem
+}
+.w-28 {
+    width: 7rem
+}
+.w-2\/6 {
+    width: 33.333333%
+}
+.max-w-6xl {
+    max-width: 72rem
 }
 .max-w-\[370px\] {
     max-width: 370px !important
@@ -922,6 +940,15 @@
 }
 .pl-16 {
     padding-left: 4rem !important
+}
+.pt-32 {
+    padding-top: 8rem
+}
+.pt-24 {
+    padding-top: 6rem
+}
+.pt-10 {
+    padding-top: 2.5rem
 }
 .text-center {
     text-align: center !important

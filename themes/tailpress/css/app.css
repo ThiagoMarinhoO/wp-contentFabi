@@ -868,8 +868,14 @@ video {
 .w-16{
     width: 4rem !important;
 }
+.w-2\/6{
+    width: 33.333333%;
+}
 .w-20{
     width: 5rem !important;
+}
+.w-28{
+    width: 7rem;
 }
 .w-4{
     width: 1rem !important;
@@ -1309,6 +1315,10 @@ video {
     padding-left: 8rem !important;
     padding-right: 8rem !important;
 }
+.px-32{
+    padding-left: 8rem;
+    padding-right: 8rem;
+}
 .px-4{
     padding-left: 1rem !important;
     padding-right: 1rem !important;
@@ -1374,6 +1384,8 @@ video {
     padding-bottom: 1.5rem !important;
 }
 .py-8{
+    padding-top: 2rem;
+    padding-bottom: 2rem;
     padding-top: 2rem !important;
     padding-bottom: 2rem !important;
 }
@@ -1388,6 +1400,9 @@ video {
 }
 .pl-10{
     padding-left: 2.5rem !important;
+}
+.pt-10{
+    padding-top: 2.5rem;
 }
 .pt-20{
     padding-top: 5rem !important;
@@ -1792,6 +1807,42 @@ ul.timeline li:hover:before {
     ul.timeline:after {
       display: none;
   }
+  }
+.swiper-button-lock{
+    display: block !important;
+  }
+.swiper-deps{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+.swiper-deps .swiper-button-prev{
+    color: #000;
+    border: 1px solid;
+    border-radius: 50px;
+    width: 40px;
+    height: 40px;
+    margin: 0 auto;
+    text-align: center;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+  }
+.swiper-deps .swiper-button-next{
+    color: #000;
+    border: 1px solid #D7F5F0;
+    border-radius: 50px;
+    width: 40px;
+    height: 40px;
+    margin: 0 auto;
+    text-align: center;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    background-color: #D7F5F0;
+  }
+.swiper-button-prev:after , .swiper-button-next:after{
+    font-size: 16px !important;
   }
 @media (min-width: 960px){
 
