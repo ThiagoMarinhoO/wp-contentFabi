@@ -61,27 +61,6 @@ $deps = new WP_Query($args);
                 </div>
             </div> 
         </div>
-        <!-- <div class="mx-6 md:flex md:items-center md:justify-between">
-            <div>
-                <h1 class="text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-5xl">
-                    Depoimentos
-                </h1>
-            </div>
-
-            <div class="flex justify-between mt-8 md:mt-0">
-                <button title="left arrow" class="p-4 mx-3 text-gray-800 transition-colors duration-300 border rounded-full rtl:-scale-x-100 hover:bg-gray-100">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
-                    </svg>
-                </button>
-
-                <button title="right arrow" class="p-4 text-gray-800 transition-colors duration-300 border rounded-full rtl:-scale-x-100 hover:bg-gray-100">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
-                    </svg>
-                </button>
-            </div>
-        </div> -->
     </div>
 </section>
 
@@ -92,35 +71,104 @@ $deps = new WP_Query($args);
         </div>
         <?php
         if ( $deps->have_posts() ) : ?>
-            <div class="grid grid-cols-4 gap-10 px-5 overflow-hidden">
-                <?php while ( $deps->have_posts() ) : $deps->the_post(); ?>
-                <div class="relative bg-gradient-to-b from-transparent to-white h-full" style="min-height: 400px;" depID="<?php echo get_the_ID()?>">
-                    <img class="w-full h-full object-cover" src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?php echo get_the_title(); ?>">
-                    <div class="absolute bottom-0 left-0 right-0 px-5 py-10 bg-gradient-to-b from-white-200 to-transparent min-h-400 flex flex-col justify-end text-white cursor-pointer open-video" style="min-height: 400px;">
-                        <svg class="w-16 h-16 m-auto text-red-900" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                            <path d="M8 5v10l7-5z" />
+            <div class="px-5 overflow-hidden deps-card swiper">
+                <div class="swiper-wrapper">
+                    <?php while ( $deps->have_posts() ) : $deps->the_post(); ?>
+                    <div class="relative bg-gradient-to-b from-transparent to-white h-full modal-content swiper-slide" style="min-height: 400px;">
+                        <img class="w-full h-full object-cover" src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?php echo get_the_title(); ?>">
+                        <div class="absolute bottom-0 left-0 right-0 px-5 py-10 min-h-400 flex flex-col justify-end text-white cursor-pointer open-video" style="background-image: linear-gradient(to bottom, rgba(255,255,255,0) 54%, rgba(255,255,255,0.8) 80%, rgba(255,255,255,1) 100%); min-height: 400px;" depID="<?php echo get_the_ID()?>">
+                            <svg class="w-16 h-16 m-auto text-red-900" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M8 5v10l7-5z" />
+                            </svg>
+                            <h2 class="text-3xl font-bold leading-tight text-blue-900"><?php echo get_the_title(); ?></h2>
+                            <div class="text-blue-900"><?php echo the_content(); ?></div>
+                        </div>
+                    </div>
+                    <input type="hidden" class="video-url" value="<?php echo get_field('url_do_video' , get_the_ID())?>" data-id="<?php echo get_the_ID()?>">
+                    <?php endwhile; ?>
+                </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+            <div id="modal" class="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 z-50 hidden">
+                <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-lg p-5">
+                    <div class="relative overflow-hidden">
+                        <iframe width="560" height="315" id="videoDep" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                    <button id="close-modal" class="absolute top-0 right-0 mt-1 mr-1 text-gray-600 hover:text-gray-900 cursor-pointer focus:outline-none">
+                        <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M12.707 12.707a1 1 0 01-1.414 0L10 11.414l-1.293 1.293a1 1 0 01-1.414-1.414L8.586 10 7.293 8.707a1 1 0 011.414-1.414L10 8.586l1.293-1.293a1 1 0 011.414 1.414L11.414 10l1.293 1.293a1 1 0 010 1.414z" clip-rule="evenodd" />
                         </svg>
-                        <h2 class="text-3xl font-bold leading-tight text-blue-900"><?php echo get_the_title(); ?></h2>
-                        <div class="text-blue-900"><?php echo the_content(); ?></div>
+                    </button>
+                </div>
+            </div> 
+        <?php endif; ?>      
+    </div>
+</section>
+
+<section class="bg-center bg-no-repeat bg-fixed bg-[url('/wp-content/themes/tailpress/resources/images/bg-coaching.png')] bg-cover bg-blend-multiply py-28">
+    <div class="container mx-auto">
+        <div class="bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg w-1/2 py-10 mx-auto flex justify-betweenr items-center rounded-lg flex-col px-20 text-center">
+            <h2 class="my-5 font-bold text-4xl text-white">Não é coaching !</h2>
+            <p class="text-1xl text-[#D5D8DC]">Não é coaching. O Método GROWP tem como bases teórica e prática a Gestalt-terapia e na Psicologia da Carreira. </p>
+        </div>
+    </div>
+</section>
+
+<section class="bg-white py-20 px-20">
+    <div class="container mx-auto">
+        <div>
+            <h2 class="text-center text-4xl font-bold mb-20">É uma formação totalmente prática com o meu acompanhamento para que você consiga: </h2>
+        </div>
+        <div class="grid grid-cols-2 gap-8">
+            <div class="col-span-2 flex flex-col justify-between">
+                <div class="flex justify-between">
+                    <div class="w-1/2">
+                        <div class="w-full flex text-center flex-col justify-center">
+                            <img src="/wp-content/themes/tailpress/resources/images/suitcase1.png" class="w-20 mx-auto">
+                            <h2 class="my-5 font-bold text-2xl">Desenvolvimento profissional</h2>
+                            <p>para pessoas que estão se sentindo estagnadas profissionalmente e precisam de ajuda para definir o próximo passo de carreira e desenhar o plano de desenvolvimento profissional.</p>
+                        </div>
+                    </div>
+                    <div class="w-1/2">
+                        <div class="w-full flex text-center flex-col justify-center">
+                            <img src="/wp-content/themes/tailpress/resources/images/suitcase1.png" class="w-20 mx-auto">
+                            <h2 class="my-5 font-bold text-2xl">Desenvolvimento profissional</h2>
+                            <p>para pessoas que estão se sentindo estagnadas profissionalmente e precisam de ajuda para definir o próximo passo de carreira e desenhar o plano de desenvolvimento profissional.</p>
+                        </div>
                     </div>
                 </div>
-                <?php endwhile; ?>
             </div>
-                <?php while($deps->have_posts()) : $deps->the_post()?>
-                    <div id="modal" class="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 z-50 hidden">
-                        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-lg p-5">
-                            <div class="relative overflow-hidden" style="padding-top: 56.25%">
-                                <iframe id="player" class="absolute top-0 left-0 w-full h-full" src="<?php echo get_field('url_do_video' , get_the_ID())?>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                            </div>
-                            <button id="close-modal" class="absolute top-0 right-0 mt-1 mr-1 text-gray-600 hover:text-gray-900 cursor-pointer focus:outline-none">
-                                <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                                    <path fill-rule="evenodd" d="M12.707 12.707a1 1 0 01-1.414 0L10 11.414l-1.293 1.293a1 1 0 01-1.414-1.414L8.586 10 7.293 8.707a1 1 0 011.414-1.414L10 8.586l1.293-1.293a1 1 0 011.414 1.414L11.414 10l1.293 1.293a1 1 0 010 1.414z" clip-rule="evenodd" />
-                                </svg>
-                            </button>
+            <div class="col-span-2 flex flex-col justify-between">
+                <div class="flex justify-center">
+                    <div class="w-1/2">
+                        <div class="w-full flex text-center flex-col justify-center">
+                            <img src="/wp-content/themes/tailpress/resources/images/suitcase1.png" class="w-20 mx-auto">
+                            <h2 class="my-5 font-bold text-2xl">Desenvolvimento profissional</h2>
+                            <p>para pessoas que estão se sentindo estagnadas profissionalmente e precisam de ajuda para definir o próximo passo de carreira e desenhar o plano de desenvolvimento profissional.</p>
                         </div>
-                    </div> 
-                <?php endwhile ?>
-        <?php endif; ?>      
+                    </div>
+                </div>
+            </div>
+            <div class="col-span-2 flex flex-col justify-between">
+                <div class="flex justify-between">
+                    <div class="w-1/2">
+                        <div class="w-full flex text-center flex-col justify-center">
+                            <img src="/wp-content/themes/tailpress/resources/images/suitcase1.png" class="w-20 mx-auto">
+                            <h2 class="my-5 font-bold text-2xl">Desenvolvimento profissional</h2>
+                            <p>para pessoas que estão se sentindo estagnadas profissionalmente e precisam de ajuda para definir o próximo passo de carreira e desenhar o plano de desenvolvimento profissional.</p>
+                        </div>
+                    </div>
+                    <div class="w-1/2">
+                        <div class="w-full flex text-center flex-col justify-center">
+                            <img src="/wp-content/themes/tailpress/resources/images/suitcase1.png" class="w-20 mx-auto">
+                            <h2 class="my-5 font-bold text-2xl">Desenvolvimento profissional</h2>
+                            <p>para pessoas que estão se sentindo estagnadas profissionalmente e precisam de ajuda para definir o próximo passo de carreira e desenhar o plano de desenvolvimento profissional.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 
@@ -570,227 +618,242 @@ $deps = new WP_Query($args);
         <h1 class="text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-5xl">Perguntas frequentes</h1>
 
         <div class="mt-8 space-y-8 lg:mt-16">
+
             <div class="p-8 bg-gray-100 rounded-lg">
-                <button class="flex items-center justify-between w-full">
-                    <h1 class="font-semibold text-gray-700">Quanto tempo dura a formação?</h1>
+                <button class="flex items-center justify-between rounded-md px-4 py-2 text-gray-700 w-full">
+                    
+                    <h1 class="font-semibold text-gray-700">Quanto custa ?</h1>
 
                     <span class="text-gray-400 bg-gray-200 rounded-full">
                         <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 12H6" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>
                         </svg>
                     </span>
                 </button>
 
-                <p class="mt-6 text-sm text-gray-500">
-                    O cronograma do curso foi organizado para você finalizar em um pouco mais de dois meses.  Mas você terá até um ano para concluir.
+               <p class="hidden bg-gray-200 rounded-md p-4 mt-2 transition-all duration-500 opacity-0">
+                O valor do investimento é informado pela consultora de carreira, depois que você preencher o formulário de contato.
                 </p>
             </div>
 
             <div class="p-8 bg-gray-100 rounded-lg">
-                <button class="flex items-center justify-between w-full">
+                <button class="flex items-center justify-between rounded-md px-4 py-2 text-gray-700 w-full">
+                    
                     <h1 class="font-semibold text-gray-700">O certificado é reconhecido pelo Ministério da Educação?</h1>
 
                     <span class="text-gray-400 bg-gray-200 rounded-full">
                         <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 12H6" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>
                         </svg>
                     </span>
                 </button>
 
-                <p class="mt-6 text-sm text-gray-500">
-                    Sim! O certificado é reconhecido pelo Ministério da Educação.
+               <p class="hidden bg-gray-200 rounded-md p-4 mt-2 transition-all duration-500 opacity-0">
+                Sim! O certificado é reconhecido pelo Ministério da Educação.
                 </p>
             </div>
 
             <div class="p-8 bg-gray-100 rounded-lg">
-                <button class="flex items-center justify-between w-full">
+                <button class="flex items-center justify-between rounded-md px-4 py-2 text-gray-700 w-full">
+                    
                     <h1 class="font-semibold text-gray-700">Tem pré-requisito?</h1>
 
                     <span class="text-gray-400 bg-gray-200 rounded-full">
                         <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 12H6" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>
                         </svg>
                     </span>
                 </button>
 
-                <p class="mt-6 text-sm text-gray-500">
-                    Sim! Querer trabalhar com desenvolvimento de pessoas com foco em carreira.
+               <p class="hidden bg-gray-200 rounded-md p-4 mt-2 transition-all duration-500 opacity-0">
+                Sim! Querer trabalhar com desenvolvimento de pessoas com foco em carreira.
                 </p>
             </div>
 
             <div class="p-8 bg-gray-100 rounded-lg">
-                <button class="flex items-center justify-between w-full">
+                <button class="flex items-center justify-between rounded-md px-4 py-2 text-gray-700 w-full">
+                    
                     <h1 class="font-semibold text-gray-700">Terá aulas ao vivo ou todas as aulas estão gravadas?</h1>
 
                     <span class="text-gray-400 bg-gray-200 rounded-full">
                         <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 12H6" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>
                         </svg>
                     </span>
                 </button>
 
-                <p class="mt-6 text-sm text-gray-500">
-                    O curso é gravado e mesmo as aulas ao vivo (inclusive as tutorias) terão as gravações disponibilizadas na plataforma. 
+               <p class="hidden bg-gray-200 rounded-md p-4 mt-2 transition-all duration-500 opacity-0">
+                O curso é gravado e mesmo as aulas ao vivo (inclusive as tutorias) terão as gravações disponibilizadas na plataforma. 
                 </p>
             </div>
 
             <div class="p-8 bg-gray-100 rounded-lg">
-                <button class="flex items-center justify-between w-full">
+                <button class="flex items-center justify-between rounded-md px-4 py-2 text-gray-700 w-full">
+                    
                     <h1 class="font-semibold text-gray-700">Tem material complementar?</h1>
 
                     <span class="text-gray-400 bg-gray-200 rounded-full">
                         <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 12H6" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>
                         </svg>
                     </span>
                 </button>
 
-                <p class="mt-6 text-sm text-gray-500">
-                    Sim! Cada aula terá o material correspondente ao tema.
+               <p class="hidden bg-gray-200 rounded-md p-4 mt-2 transition-all duration-500 opacity-0">
+                Sim! Cada aula terá o material correspondente ao tema.
                 </p>
             </div>
-            
+
             <div class="p-8 bg-gray-100 rounded-lg">
-                <button class="flex items-center justify-between w-full">
+                <button class="flex items-center justify-between rounded-md px-4 py-2 text-gray-700 w-full">
+                    
                     <h1 class="font-semibold text-gray-700">Quanto tempo tem acesso?</h1>
 
                     <span class="text-gray-400 bg-gray-200 rounded-full">
                         <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 12H6" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>
                         </svg>
                     </span>
                 </button>
 
-                <p class="mt-6 text-sm text-gray-500">
-                    Por até um ano.
+               <p class="hidden bg-gray-200 rounded-md p-4 mt-2 transition-all duration-500 opacity-0">
+                Por até um ano.
                 </p>
             </div>
-            
+
             <div class="p-8 bg-gray-100 rounded-lg">
-                <button class="flex items-center justify-between w-full">
+                <button class="flex items-center justify-between rounded-md px-4 py-2 text-gray-700 w-full">
+                    
                     <h1 class="font-semibold text-gray-700">Não sou psicólogo, posso fazer o curso?</h1>
 
                     <span class="text-gray-400 bg-gray-200 rounded-full">
                         <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 12H6" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>
                         </svg>
                     </span>
                 </button>
 
-                <p class="mt-6 text-sm text-gray-500">
-                    Sim! O curso não é exclusivo para psicólogos. Por isso, na etapa de Teoria você aprenderá tudo o que precisa saber sobre psicologia para fazer os atendimentos em Orientação de Carreira.
+               <p class="hidden bg-gray-200 rounded-md p-4 mt-2 transition-all duration-500 opacity-0">
+                Sim! O curso não é exclusivo para psicólogos. Por isso, na etapa de Teoria você aprenderá tudo o que precisa saber sobre psicologia para fazer os atendimentos em Orientação de Carreira.
                 </p>
             </div>
 
             <div class="p-8 bg-gray-100 rounded-lg">
-                <button class="flex items-center justify-between w-full">
+                <button class="flex items-center justify-between rounded-md px-4 py-2 text-gray-700 w-full">
+                    
                     <h1 class="font-semibold text-gray-700">Além do atendimento de adultos, gostaria de atender adolescentes. Vou aprender a fazer isso no Método GROWP?</h1>
 
                     <span class="text-gray-400 bg-gray-200 rounded-full">
                         <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 12H6" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>
                         </svg>
                     </span>
                 </button>
 
-                <p class="mt-6 text-sm text-gray-500">
-                    Sim! Com o bônus “Adaptando o método para atender adolescentes” você aprenderá a fazer os atendimentos para apoiar este público a fazer sua primeira escolha profissional.
+               <p class="hidden bg-gray-200 rounded-md p-4 mt-2 transition-all duration-500 opacity-0">
+                Sim! Com o bônus “Adaptando o método para atender adolescentes” você aprenderá a fazer os atendimentos para apoiar este público a fazer sua primeira escolha profissional.
                 </p>
             </div>
 
             <div class="p-8 bg-gray-100 rounded-lg">
-                <button class="flex items-center justify-between w-full">
+                <button class="flex items-center justify-between rounded-md px-4 py-2 text-gray-700 w-full">
+                    
                     <h1 class="font-semibold text-gray-700">Ainda não me formei na faculdade, posso fazer o curso?</h1>
 
                     <span class="text-gray-400 bg-gray-200 rounded-full">
                         <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 12H6" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>
                         </svg>
                     </span>
                 </button>
 
-                <p class="mt-6 text-sm text-gray-500">
-                    Sim! Minha recomendação é que você faça o curso no último ano de faculdade.  Assim você se sentirá mais segura para fazer os atendimentos. 
+               <p class="hidden bg-gray-200 rounded-md p-4 mt-2 transition-all duration-500 opacity-0">
+                Sim! Minha recomendação é que você faça o curso no último ano de faculdade.  Assim você se sentirá mais segura para fazer os atendimentos. 
                 </p>
             </div>
 
             <div class="p-8 bg-gray-100 rounded-lg">
-                <button class="flex items-center justify-between w-full">
+                <button class="flex items-center justify-between rounded-md px-4 py-2 text-gray-700 w-full">
+                    
                     <h1 class="font-semibold text-gray-700">Vou aprender a fazer atendimentos on-line e presenciais?</h1>
 
                     <span class="text-gray-400 bg-gray-200 rounded-full">
                         <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 12H6" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>
                         </svg>
                     </span>
                 </button>
 
-                <p class="mt-6 text-sm text-gray-500">
-                    Sim! Você será capacitada para fazer atendimentos de Orientação de Carreira nos dois formatos: presencial e on-line. 
+               <p class="hidden bg-gray-200 rounded-md p-4 mt-2 transition-all duration-500 opacity-0">
+                Sim! Você será capacitada para fazer atendimentos de Orientação de Carreira nos dois formatos: presencial e on-line. 
                 </p>
             </div>
 
             <div class="p-8 bg-gray-100 rounded-lg">
-                <button class="flex items-center justify-between w-full">
+                <button class="flex items-center justify-between rounded-md px-4 py-2 text-gray-700 w-full">
+                    
                     <h1 class="font-semibold text-gray-700">Como saber que conseguirei acompanhar as aulas?</h1>
 
                     <span class="text-gray-400 bg-gray-200 rounded-full">
                         <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 12H6" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>
                         </svg>
                     </span>
                 </button>
 
-                <p class="mt-6 text-sm text-gray-500">
-                    Você receberá um cronograma proposto para se organizar e finalizar o curso em cerca de 2 meses. Além disso, como as aulas estão gravadas, pode assistir no tempo que tem livre. 
+               <p class="hidden bg-gray-200 rounded-md p-4 mt-2 transition-all duration-500 opacity-0">
+                Você receberá um cronograma proposto para se organizar e finalizar o curso em cerca de 2 meses. Além disso, como as aulas estão gravadas, pode assistir no tempo que tem livre.
                 </p>
             </div>
 
             <div class="p-8 bg-gray-100 rounded-lg">
-                <button class="flex items-center justify-between w-full">
+                <button class="flex items-center justify-between rounded-md px-4 py-2 text-gray-700 w-full">
+                    
                     <h1 class="font-semibold text-gray-700">Tem suporte ao aluno?</h1>
 
                     <span class="text-gray-400 bg-gray-200 rounded-full">
                         <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 12H6" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>
                         </svg>
                     </span>
                 </button>
 
-                <p class="mt-6 text-sm text-gray-500">
-                    Sim! Você terá acompanhamento através da plataforma do aluno (através do fórum) e do encontro de  tutoria, realizado mensalmente, ao vivo. 
+               <p class="hidden bg-gray-200 rounded-md p-4 mt-2 transition-all duration-500 opacity-0">
+                Sim! Você terá acompanhamento através da plataforma do aluno (através do fórum) e do encontro de  tutoria, realizado mensalmente, ao vivo. 
                 </p>
             </div>
-            
+
             <div class="p-8 bg-gray-100 rounded-lg">
-                <button class="flex items-center justify-between w-full">
+                <button class="flex items-center justify-between rounded-md px-4 py-2 text-gray-700 w-full">
+                    
                     <h1 class="font-semibold text-gray-700">Quantas horas de curso?</h1>
 
                     <span class="text-gray-400 bg-gray-200 rounded-full">
                         <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 12H6" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>
                         </svg>
                     </span>
                 </button>
 
-                <p class="mt-6 text-sm text-gray-500">
-                    O total é de 65 horas, contando com os conteúdos obrigatórios e as leituras complementares.
+               <p class="hidden bg-gray-200 rounded-md p-4 mt-2 transition-all duration-500 opacity-0">
+                O total é de 65 horas, contando com os conteúdos obrigatórios e as leituras complementares.
                 </p>
             </div>
-            
+
             <div class="p-8 bg-gray-100 rounded-lg">
-                <button class="flex items-center justify-between w-full">
+                <button class="flex items-center justify-between rounded-md px-4 py-2 text-gray-700 w-full">
+                    
                     <h1 class="font-semibold text-gray-700">Onde as aulas gravadas serão disponibilizadas?</h1>
 
                     <span class="text-gray-400 bg-gray-200 rounded-full">
                         <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 12H6" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>
                         </svg>
                     </span>
                 </button>
 
-                <p class="mt-6 text-sm text-gray-500">
-                    Através da plataforma Hotmart.
+               <p class="hidden bg-gray-200 rounded-md p-4 mt-2 transition-all duration-500 opacity-0">
+                Através da plataforma Hotmart.
                 </p>
             </div>
         </div>

@@ -49,8 +49,10 @@ function tailpress_enqueue_scripts() {
 	$theme = wp_get_theme();
 
 	wp_enqueue_style( 'tailpress', tailpress_asset( 'css/app.css' ), array(), $theme->get( 'Version' ) );
+	wp_enqueue_style('swiper-css' , 'https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css');
 
 	wp_enqueue_script( 'tailpress', tailpress_asset( 'js/app.js' ), array('jquery'), $theme->get( 'Version' ) );
+	wp_enqueue_script( 'swiper-js'  , 'https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js');
 }
 
 add_action( 'wp_enqueue_scripts', 'tailpress_enqueue_scripts' );
