@@ -40,41 +40,41 @@ $deps_query = new WP_Query($depoimentos);
     </div>
 </section>
 
-<section class="bg-white lg:max-w-7xl mx-auto px-5 py-12">
+<section class="bg-white py-16 lg:max-w-7xl mx-auto px-5 lg:py-32">
     <div class="container mx-auto">
         <div>
-            <h2 class="text-center text-4xl font-bold mb-20">Você aprenderá a realizar cinco serviços de carreira:</h2>
+            <h2 class="text-3xl text-center font-extrabold tracking-tight leading-none mb-12 text-gray-900 md:text-5xl lg:text-5xl lg:mb-20">Você aprenderá a realizar cinco serviços de carreira:</h2>
         </div>
-        <div class="grid grid-cols-3 gap-10">
-            <div class="w-3/3">
+        <div class="grid grid-cols-1 gap-10 lg:grid-cols-3 lg:gap-x-16">
+            <div class="">
                 <div class="w-full">
                     <img src="/wp-content/themes/tailpress/resources/images/suitcase1.png">
                     <h2 class="my-5 font-bold text-2xl">Desenvolvimento profissional</h2>
                     <p>para pessoas que estão se sentindo estagnadas profissionalmente e precisam de ajuda para definir o próximo passo de carreira e desenhar o plano de desenvolvimento profissional.</p>
                 </div>
             </div> 
-            <div class="w-3/3">
+            <div class="">
                 <div class="w-full">
                     <img src="/wp-content/themes/tailpress/resources/images/suitcase2.png">
                     <h2 class="my-5 font-bold text-2xl">Orientação para aposentadoria</h2>
                     <p>para pessoas que estão prestes a se aposentar e querem continuar trabalhando, a escolherem uma nova carreira alinhada com sua nova fase de vida.</p>
                 </div>
             </div> 
-            <div class="w-3/3">
+            <div class="">
                 <div class="w-full">
                     <img src="/wp-content/themes/tailpress/resources/images/suitcase3.png">
                     <h2 class="my-5 font-bold text-2xl">Desenvolvimento da Liderança</h2>
                     <p>para pessoas que queiram suporte para se desenvolver como líderes.</p>
                 </div>
             </div> 
-            <div class="w-3/3">
+            <div class="">
                 <div class="w-full">
                     <img src="/wp-content/themes/tailpress/resources/images/suitcase4.png">
                     <h2 class="my-5 font-bold text-2xl">Planejamento de Carreira</h2>
                     <p>para profissionais que desejam desenhar o seu plano de carreira, ou plano de desenvolvimento individual.</p>
                 </div>
             </div> 
-            <div class="w-3/3">
+            <div class="">
                 <div class="w-full">
                     <img src="/wp-content/themes/tailpress/resources/images/suitcase5.png">
                     <h2 class="my-5 font-bold text-2xl">Transição de Carreira</h2>
@@ -128,7 +128,7 @@ $deps_query = new WP_Query($depoimentos);
 </section>
 
 <section class="bg-blue-50 py-8">
-    <div class="container lg:max-w-7xl mx-auto px-6 py-20">
+    <div class="container lg:max-w-7xl mx-auto py-6 px-6 lg:py-20">
         <div class="mt-12 flex flex-col items-center space-y-12 lg:flex-row lg:space-y-0 lg:space-x-16">
             <div class="lg:w-3/4">
                 <h2 class="text-xl font-semibold lg:text-4xl text-gray-900">Esta formação é uma capacitação profissional reconhecida pelo Ministério da Educação através da Faculdade Brasília, garantindo a qualidade do conteúdo e do método aplicado.</h2>
@@ -203,31 +203,31 @@ $deps_query = new WP_Query($depoimentos);
     </div>
 </section>
 
-<section class="bg-center bg-no-repeat bg-fixed bg-[url('/wp-content/themes/tailpress/resources/images/bg-coaching.png')] bg-cover bg-blend-multiply py-28">
+<section class="bg-center bg-no-repeat bg-fixed bg-[url('/wp-content/themes/tailpress/resources/images/bg-coaching.png')] bg-cover bg-blend-multiply py-16 lg:py-28">
     <div class="container mx-auto">
-        <div class="bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg w-1/2 py-10 mx-auto flex justify-betweenr items-center rounded-lg flex-col px-20 text-center">
+        <div class="bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg lg:w-1/2 py-10 mx-auto flex justify-betweenr items-center rounded-lg flex-col px-8 lg:px-20 text-center">
             <h2 class="my-5 font-bold text-4xl text-white">Não é coaching !</h2>
-            <p class="text-1xl text-[#D5D8DC]">Não é coaching. O Método GROWP tem como bases teórica e prática a Gestalt-terapia e na Psicologia da Carreira. </p>
+            <p class="text-1xl text-[#D5D8DC]">Não é coaching. O Método GROWP tem como bases teórica e prática a Gestalt-terapia e na Psicologia da Carreira.</p>
         </div>
     </div>
 </section>
 
-<section class="bg-white py-20 px-20">
+<section class="bg-white py-20 lg:px-20">
     <div class="container mx-auto">
         <div>
-            <h2 class="text-center text-4xl font-bold mb-20">É uma formação totalmente prática com o meu acompanhamento para que você consiga: </h2>
+            <h2 class="text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-5xl mb-20">É uma formação totalmente prática com o meu acompanhamento para que você consiga:</h2>
         </div>
-        <div class="grid grid-cols-2 gap-8">
-            <div class="col-span-2 flex flex-col justify-between">
-                <div class="flex justify-between">
-                    <div class="w-1/2 px-32">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div class="lg:col-span-2 flex flex-col justify-between">
+                <div class="flex flex-col lg:flex-row justify-between">
+                    <div class="mb-5 lg:mb-0 lg:w-1/2 lg:px-32">
                         <div class="w-full flex text-center flex-col justify-center">
                             <img src="/wp-content/themes/tailpress/resources/images/dado1.png" class="w-20 mx-auto">
                             <h2 class="my-5 font-bold text-2xl">Realizar atendimentos</h2>
                             <p>Realizar atendimentos individuais de Orientação de Carreira com segurança.</p>
                         </div>
                     </div>
-                    <div class="w-1/2 px-32">
+                    <div class="lg:w-1/2 lg:px-32">
                         <div class="w-full flex text-center flex-col justify-center">
                             <img src="/wp-content/themes/tailpress/resources/images/dado2.png" class="w-20 mx-auto">
                             <h2 class="my-5 font-bold text-2xl">Trabalhar com desenvolvimento humano</h2>
@@ -236,9 +236,9 @@ $deps_query = new WP_Query($depoimentos);
                     </div>
                 </div>
             </div>
-            <div class="col-span-2 flex flex-col justify-between">
+            <div class="lg:col-span-2 flex flex-col justify-between">
                 <div class="flex justify-center">
-                    <div class="w-1/2 px-32">
+                    <div class="lg:w-1/2 lg:px-32">
                         <div class="w-full flex text-center flex-col justify-center">
                             <img src="/wp-content/themes/tailpress/resources/images/dado3.png" class="w-20 mx-auto">
                             <h2 class="my-5 font-bold text-2xl">Mais Flexibilidade</h2>
@@ -247,16 +247,16 @@ $deps_query = new WP_Query($depoimentos);
                     </div>
                 </div>
             </div>
-            <div class="col-span-2 flex flex-col justify-between">
-                <div class="flex justify-between">
-                    <div class="w-1/2 px-32">
+            <div class="lg:col-span-2 flex flex-col justify-between">
+                <div class="flex flex-col lg:flex-row justify-between">
+                    <div class="mb-5 lg:mb-0 lg:w-1/2 lg:px-32">
                         <div class="w-full flex text-center flex-col justify-center">
                             <img src="/wp-content/themes/tailpress/resources/images/dado4.png" class="w-20 mx-auto">
                             <h2 class="my-5 font-bold text-2xl">Atender adultos com as seguintes demandas</h2>
                             <p>transição de carreira, desenvolvimento profissional, planejamento de carreira, desenvolvimento de líderes e orientação para aposentadoria.</p>
                         </div>
                     </div>
-                    <div class="w-1/2 px-32">
+                    <div class="lg:w-1/2 lg:px-32">
                         <div class="w-full flex text-center flex-col justify-center">
                             <img src="/wp-content/themes/tailpress/resources/images/dado5.png" class="w-20 mx-auto">
                             <h2 class="my-5 font-bold text-2xl">Estruturar sua transição profissional</h2>
@@ -578,7 +578,7 @@ $deps_query = new WP_Query($depoimentos);
                         </div>
                     <?php endwhile ?>
                 </div>
-                <div class="pagination-deps flex justify-between fixed z-50 w-28 right-0 top-0 absolute">
+                <div class="pagination-deps flex justify-between z-50 w-28 right-0 top-0 absolute">
                     <div class="swiper-button-prev block"></div>
                     <div class="swiper-button-next block"></div>
                 </div>
