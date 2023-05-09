@@ -56,6 +56,21 @@ jQuery(document).ready(function ($) {
     //       },
     // },
   });
+
+  var novoSwiper = new Swiper('.swiperProfissional', {
+    slidesPerView: 'auto',
+    spaceBetween: 72,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev'
+    }
+    // breakpoints: {
+    //       767: {
+    //       slidesPerView: 1,
+    //       spaceBetween: 0,
+    //       },
+    // },
+  });
 });
 
 window.addEventListener('DOMContentLoaded', function () {
