@@ -64,7 +64,6 @@ jQuery(document).ready(function ($) {
       prevEl: '.swiper-button-prev'
     }
   });
-
   var novoSwiper = new Swiper('.swiperProfissional', {
     slidesPerView: 'auto',
     spaceBetween: 72,
@@ -80,6 +79,7 @@ jQuery(document).ready(function ($) {
     // },
   });
 });
+
 window.addEventListener('DOMContentLoaded', function () {
   var _document$querySelect;
   var main_navigation = document.querySelector('#primaryNavContent');
