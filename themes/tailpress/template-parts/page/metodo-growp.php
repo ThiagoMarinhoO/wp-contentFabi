@@ -127,6 +127,82 @@ $deps_query = new WP_Query($depoimentos);
     </div>
 </section>
 
+<section class="bg-blue-50 py-8">
+    <div class="container lg:max-w-7xl mx-auto px-6 py-20">
+        <div class="mt-12 flex flex-col items-center space-y-12 lg:flex-row lg:space-y-0 lg:space-x-16">
+            <div class="lg:w-3/4">
+                <h2 class="text-xl font-semibold lg:text-4xl text-gray-900">Esta formação é uma capacitação profissional reconhecida pelo Ministério da Educação através da Faculdade Brasília, garantindo a qualidade do conteúdo e do método aplicado.</h2>
+            </div>
+            <div class="lg:w-1/4">
+                <img class="w-full" src="/wp-content/uploads/2023/05/c56438e5-a0a5-4190-8069-0c0a81897b7c.png" alt="">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="relative flex overflow-hidden">
+    <div class="min-h-screen bg-white md:w-3/5 hidden md:block"></div>
+    <div class="min-h-screen bg-[#120F40] md:w-2/5 hidden md:block"></div>
+
+    <div class="min-h-max md:min-h-screen px-5 py-12 lg:py-20 :py-20 md:absolute md:top-0 md:left-0 md:mx-24 container">
+        <h1 class="text-3xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-5xl mb-32">
+            Esta capacitação profissional é para
+        </h1>
+
+        <!-- Slider main container -->
+        <div class="swiperProfissional h-96 w-full overflow-hidden">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper items-stretch">
+            <!-- Slides -->
+            <div class="swiper-slide max-w-sm lg:w-1/3">
+                <div class="lg:h-60 w-full p-8 bg-white rounded-md shadow-lg">
+                    <div class="inline-flex p-4 bg-[#43667B] rounded-full mb-4">
+                        <img class="object-cover w-6 h-6" src="/wp-content/uploads/2023/05/mao-1.png" alt="">
+                    </div>
+                    <p class="leading-loose text-gray-500">
+                        Psicólogos e profissionais de RH (ou formandos nessas áreas) a trabalhar com Orientação de Carreira.
+                    </p>
+                </div>
+            </div>
+            <div class="swiper-slide max-w-sm lg:w-1/3">
+                <div class="lg:h-60 w-full p-8 bg-white rounded-md shadow-lg">
+                    <div class="inline-flex p-4 bg-[#DA4437] rounded-full mb-4">
+                        <img class="object-cover w-6 h-6" src="/wp-content/uploads/2023/05/orientacao-1.png" alt="">
+                    </div>
+                    <p class="leading-loose text-gray-500">
+                        Profissionais que desejam conduzir o processo de orientação de carreira com segurança, sabendo exatamente o que fazer, sessão por sessão.
+                    </p>
+                </div>
+            </div>
+            <div class="swiper-slide max-w-sm lg:w-1/3">
+                <div class="lg:h-60 w-full p-8 bg-white rounded-md shadow-lg">
+                    <div class="inline-flex p-4 bg-[#777D67] rounded-full mb-4">
+                        <img class="object-cover w-6 h-6" src="/wp-content/uploads/2023/05/grafico-de-crescimento.png" alt="">
+                    </div>
+                    <p class="leading-loose text-gray-500">
+                        Quem deseja alavancar os seus resultados profissionais, transformando a forma como gerencia a sua própria carreira.
+                    </p>
+                </div>
+            </div>
+            <div class="swiper-slide max-w-sm lg:w-1/3">
+                <div class="lg:h-60 w-full p-8 bg-white rounded-md shadow-lg">
+                    <div class="inline-flex p-4 bg-[#A56565] rounded-full mb-4">
+                        <img class="object-cover w-6 h-6" src="/wp-content/uploads/2023/05/fadiga.png" alt="">
+                    </div>
+                    <p class="leading-loose text-gray-500">
+                        Profissionais que estão cansados de fazer cursos on-line e presenciais e não ter resultados.
+                    </p>
+                </div>
+            </div>
+            ...
+        </div>
+
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev flex absolute top-40 left-1/4 text-gray-950 border-gray-950 lg:top-20 lg:left-3/4 m-0 mr-8 p-8 rounded-full lg:text-white border lg:border-white"></div>
+        <div class="swiper-button-next flex absolute top-40 right-1/4 text-gray-950 border-gray-950 lg:top-20 lg:right-40 m-0 p-8 rounded-full lg:text-white border lg:border-white"></div>
+    </div>
+</section>
+
 <section class="bg-center bg-no-repeat bg-fixed bg-[url('/wp-content/themes/tailpress/resources/images/bg-coaching.png')] bg-cover bg-blend-multiply py-28">
     <div class="container mx-auto">
         <div class="bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg w-1/2 py-10 mx-auto flex justify-betweenr items-center rounded-lg flex-col px-20 text-center">
