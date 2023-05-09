@@ -29,6 +29,23 @@ jQuery(document).ready(function ($) {
       }
     }
   });
+});
+window.addEventListener('DOMContentLoaded', function () {
+  var _document$querySelect;
+  var main_navigation = document.querySelector('#primaryNavContent');
+  (_document$querySelect = document.querySelector('#hamburguerButton')) === null || _document$querySelect === void 0 ? void 0 : _document$querySelect.addEventListener('click', function (e) {
+    e.preventDefault();
+    main_navigation.classList.toggle('hidden');
+  });
+});
+window.addEventListener('DOMContentLoaded', function () {
+  var _document$querySelect2;
+  var main_navigation = document.querySelector('#secondaryNavContent');
+  var hamburguerButton = document.querySelector('#secondaryHamburguerButton');
+  (_document$querySelect2 = document.querySelector('#secondaryHamburguerButton')) === null || _document$querySelect2 === void 0 ? void 0 : _document$querySelect2.addEventListener('click', function (e) {
+    e.preventDefault();
+    main_navigation.classList.toggle('hidden');
+    
   var swiper = new Swiper('.swiper', {
     direction: 'horizontal',
     loop: true,
