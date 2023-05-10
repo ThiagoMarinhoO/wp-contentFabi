@@ -145,7 +145,7 @@ $deps_query = new WP_Query($depoimentos);
     <div class="min-h-screen bg-[#120F40] md:w-2/5 hidden md:block"></div>
 
     <div class="min-h-max md:min-h-screen px-5 py-12 lg:py-20 :py-20 md:absolute md:top-0 md:left-0 md:mx-24 container">
-        <h1 class="text-3xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-5xl mb-32">
+        <h1 class="text-3xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-5xl mb-32 md:w-1/2">
             Esta capacitação profissional é para
         </h1>
 

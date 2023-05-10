@@ -25,7 +25,7 @@
             <div class="grid grid-cols-1 space-y-5 lg:grid-cols-4 lg:space-x-4 lg:space-y-0">
                 <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow">
                     <div class="h-1/3">
-                        <img class="rounded-t-lg h-full w-full" src="/wp-content/uploads/2023/05/ContentImageOpacless.png">
+                        <img class="rounded-t-lg h-full w-full" src="/wp-content/themes/tailpress/resources/images/entrevista-orientacao-vocacional.jpg">
                     </div>
                     <div class="p-5 h-2/3">
                         <a href="#">
@@ -39,7 +39,7 @@
                 </div>
                 <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow">
                     <div href="#" class="h-1/3">
-                        <img class="rounded-t-lg h-full w-full" src="/wp-content/uploads/2023/05/ContentImageOpacless.png">
+                        <img class="rounded-t-lg h-full w-full" src="/wp-content/themes/tailpress/resources/images/capacitacao-prof.jpg">
                     </div>
                     <div class="p-5 h-2/3">
                         <a href="#">
@@ -53,7 +53,7 @@
                 </div>
                 <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow">
                     <div href="#" class="h-1/3">
-                        <img class="rounded-t-lg h-full w-full" src="/wp-content/uploads/2023/05/ContentImageOpacless.png">
+                        <img class="rounded-t-lg h-full w-full" src="/wp-content/themes/tailpress/resources/images/mentoria.jpg">
                     </div>
                     <div class="p-5 h-1/3">
                         <a href="#">
