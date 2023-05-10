@@ -1,3 +1,14 @@
+<?php
+// $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
+$posts_args = array(
+  'post_type' => 'post',
+  'posts_per_page' => 6,
+  // 'paged'          => $paged
+);
+
+$posts_query = new WP_Query($posts_args);
+?>
+
 <section class="bg-gray-50 pt-20 pb-10 lg:pt-[80px] lg:pb-20">
   <div class="container lg:max-w-7xl mx-auto">
     <div class="-mx-4 flex flex-wrap justify-center">
@@ -7,104 +18,71 @@
             Nosso Blog
           </span>
           <h2
-            class="text-dark mb-4 text-3xl font-extrabold sm:text-4xl md:text-5xl"
+            class="text-dark text-3xl font-extrabold sm:text-4xl md:text-5xl"
           >
             Últimas postagens
           </h2>
         </div>
       </div>
     </div>
-    <div class="-mx-4 flex flex-wrap">
-      <div class="w-full px-4 md:w-1/2 lg:w-1/3">
-        <div class="mx-auto mb-10 max-w-[370px]">
-          <div class="mb-8 overflow-hidden rounded">
-            <img
-              src="https://cdn.tailgrids.com/2.0/image/application/images/blogs/blog-01/image-01.jpg"
-              alt="image"
-              class="w-full"
-            />
-          </div>
-          <div>
-            <span
-              class="bg-[#146858] mb-5 inline-block rounded py-1 px-4 text-center text-xs font-semibold leading-loose text-white"
-            >
-              Dec 22, 2023
-            </span>
-            <h3>
-              <a
-                href="javascript:void(0)"
-                class="text-dark hover:text-primary mb-4 inline-block text-xl font-semibold sm:text-2xl lg:text-xl xl:text-2xl"
-              >
-                Meet AutoManage, the best AI management tools
-              </a>
-            </h3>
-            <p class="text-body-color text-base">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry.
-            </p>
-          </div>
+    <div class="container mx-auto lg:max-w-7xl">
+        <?php if($posts_query->have_posts()):?>
+        <div class="grid grid-cols-1 gap-5 md:grid-cols-3 md:gap-8">
+          <?php while($posts_query->have_posts()): $posts_query->the_post();?>
+            <div class="">
+              <?php if(has_post_thumbnail( $post->ID )): ?>
+                <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ) ?>
+              <?php endif; ?>
+              <div class="mx-auto mb-10">
+                <div class="mb-5 overflow-hidden rounded">
+                  <img
+                  src="<?php echo $image[0];?>"
+                  alt="image"
+                  class="w-full"
+                  />
+                </div>
+                <div>
+                  <span
+                  class="bg-[#146858] mb-5 inline-block rounded py-1 px-4 text-center text-xs font-semibold leading-loose text-white"
+                  >
+                  <?php echo get_the_date('d M, Y'); ?>
+                  </span>
+                  <h3>
+                    <a
+                      href="<?php the_permalink()?>"
+                      class="text-dark hover:text-primary mb-4 inline-block text-xl font-semibold sm:text-2xl lg:text-xl xl:text-2xl line-clamp-2"
+                    >
+                    <?php echo get_the_title(); ?>
+                    </a>
+                  </h3>
+                  <div class="text-body-color text-base line-clamp-2">
+                    <?php the_excerpt(); ?>
+                  </div>
+                </div>
+              </div>
+            </div>
+          <?php endwhile; ?>
         </div>
-      </div>
-      <div class="w-full px-4 md:w-1/2 lg:w-1/3">
-        <div class="mx-auto mb-10 max-w-[370px]">
-          <div class="mb-8 overflow-hidden rounded">
-            <img
-              src="https://cdn.tailgrids.com/2.0/image/application/images/blogs/blog-01/image-02.jpg"
-              alt="image"
-              class="w-full"
-            />
-          </div>
-          <div>
-            <span
-              class="bg-[#146858] mb-5 inline-block rounded py-1 px-4 text-center text-xs font-semibold leading-loose text-white"
-            >
-              Mar 15, 2023
-            </span>
-            <h3>
-              <a
-                href="javascript:void(0)"
-                class="text-dark hover:text-primary mb-4 inline-block text-xl font-semibold sm:text-2xl lg:text-xl xl:text-2xl"
-              >
-                How to earn more money as a wellness coach
-              </a>
-            </h3>
-            <p class="text-body-color text-base">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry.
-            </p>
-          </div>
+        <div class="">
+            <?php
+                echo paginate_links( array(
+                    'base'         => str_replace( 999999999, '%#%', esc_url( get_pagenum_link( 999999999 ) ) ),
+                    'total'        => $posts_query->max_num_pages,
+                    'current'      => max( 1, get_query_var( 'paged' ) ),
+                    'format'       => '?paged=%#%',
+                    'show_all'     => false,
+                    'type'         => 'plain',
+                    'end_size'     => 2,
+                    'mid_size'     => 1,
+                    'prev_next'    => true,
+                    'prev_text'    => sprintf( '<i></i> %1$s', __( '&#8592;', 'text-domain' ) ),
+                    'next_text'    => sprintf( '%1$s <i></i>', __( '&#8594;', 'text-domain' ) ),
+                    'add_args'     => false,
+                    'add_fragment' => '',
+                ) );
+            ?>
         </div>
+        <?php endif; ?>
       </div>
-      <div class="w-full px-4 md:w-1/2 lg:w-1/3">
-        <div class="mx-auto mb-10 max-w-[370px]">
-          <div class="mb-8 overflow-hidden rounded">
-            <img
-              src="https://cdn.tailgrids.com/2.0/image/application/images/blogs/blog-01/image-03.jpg"
-              alt="image"
-              class="w-full"
-            />
-          </div>
-          <div>
-            <span
-              class="bg-[#146858] mb-5 inline-block rounded py-1 px-4 text-center text-xs font-semibold leading-loose text-white"
-            >
-              Jan 05, 2023
-            </span>
-            <h3>
-              <a
-                href="javascript:void(0)"
-                class="text-dark hover:text-primary mb-4 inline-block text-xl font-semibold sm:text-2xl lg:text-xl xl:text-2xl"
-              >
-                The no-fuss guide to upselling and cross selling
-              </a>
-            </h3>
-            <p class="text-body-color text-base">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
   </div>
 </section>
