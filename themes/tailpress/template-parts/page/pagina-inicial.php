@@ -52,49 +52,49 @@ $news = new WP_Query($news_args);
                             <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">Orientação de Carreira</h5>
                         </a>
                         <p class="mb-3 font-normal text-gray-700">Escolha com segurança a carreira que está alinhada ao seu estilo de vida, que valoriza seus talentos e tem demanda de mercado. </p>
-                        <a href="#" class="flex justify-center px-3 py-2 text-sm font-medium text-center text-white bg-green-700 rounded-full hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300">
+                        <a href="/orientacao-de-carreira" class="flex justify-center px-3 py-2 text-sm font-medium text-center text-white bg-green-700 rounded-full hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300">
                             Ver detalhes
                         </a>
                     </div>
                 </div>
                 <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow">
-                    <div href="#" class="h-1/3">
+                    <div href="/cursos-para-orientadores" class="h-1/3">
                         <img class="rounded-t-lg h-full w-full" src="/wp-content/themes/tailpress/resources/images/capacitacao-prof.jpg">
                     </div>
                     <div class="p-5 h-2/3">
-                        <a href="#">
+                        <a href="/cursos-para-orientadores">
                             <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">Capacitação profissional</h5>
                         </a>
                         <p class="mb-3 font-normal text-gray-700">Conheça as soluções educacionais para quem trabalha ou deseja trabalhar com Orientação de Carreira.</p>
-                        <a href="#" class="flex justify-center px-3 py-2 text-sm font-medium text-center text-white bg-green-700 rounded-full hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300">
+                        <a href="/cursos-para-orientadores" class="flex justify-center px-3 py-2 text-sm font-medium text-center text-white bg-green-700 rounded-full hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300">
                             Ver detalhes
                         </a>
                     </div>
                 </div>
                 <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow">
-                    <div href="#" class="h-1/3">
+                    <div href="cursos-para-orientadores" class="h-1/3">
                         <img class="rounded-t-lg h-full w-full" src="/wp-content/themes/tailpress/resources/images/mentoria.jpg">
                     </div>
                     <div class="p-5 h-1/3">
-                        <a href="#">
+                        <a href="cursos-para-orientadores">
                             <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">Mentoria</h5>
                         </a>
                         <p class="mb-3 font-normal text-gray-700">Direcionamento para Orientadores de Carreira que desejam estruturar seu modelo de atuação e crescer profissionalmente.</p>
-                        <a href="#" class="flex justify-center px-3 py-2 text-sm font-medium text-center text-white bg-green-700 rounded-full hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300">
+                        <a href="cursos-para-orientadores" class="flex justify-center px-3 py-2 text-sm font-medium text-center text-white bg-green-700 rounded-full hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300">
                             Ver detalhes
                         </a>
                     </div>
                 </div>
                 <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow">
-                    <div href="#" class="h-1/3">
+                    <div href="cursos-para-orientadores" class="h-1/3">
                         <img class="rounded-t-lg h-full w-full" src="/wp-content/uploads/2023/05/ContentImageOpacless.png">
                     </div>
                     <div class="p-5 h-1/3">
-                        <a href="#">
+                        <a href="cursos-para-orientadores">
                             <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">Consultoria</h5>
                         </a>
                         <p class="mb-3 font-normal text-gray-700">Fundadora da GROWP Consultoria. Consultoria em gestão e desenvolvimento de carreira para empresas.</p>
-                        <a href="#" class="flex justify-center px-3 py-2 text-sm font-medium text-center text-white bg-green-700 rounded-full hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300">
+                        <a href="cursos-para-orientadores" class="flex justify-center px-3 py-2 text-sm font-medium text-center text-white bg-green-700 rounded-full hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300">
                             Ver detalhes
                         </a>
                     </div>
