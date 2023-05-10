@@ -5,6 +5,7 @@
 	<meta name="viewport" content="width=device-width">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+	<link rel="shortcut icon" href="/wp-content/uploads/2023/05/FaviconWindow.png" />
 
 	<?php wp_head(); ?>
 </head>
