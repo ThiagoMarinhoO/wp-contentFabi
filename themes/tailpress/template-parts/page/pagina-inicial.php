@@ -1,3 +1,23 @@
+<?php 
+$args = array(
+    'post_type' => 'post',
+    'posts_per_page' => 3
+);
+
+$query = new WP_Query($args);
+$news_args = array(
+    'post_type' => 'post',
+    'posts_per_page' => 3,
+    'tax_query' => array(
+        array(
+            'taxonomy' => 'category',
+            'field' => 'slug',
+            'terms' => 'news'
+        )
+    )
+);
+$news = new WP_Query($news_args);
+?>
 <section class="bg-gray-900">
     <div class="bg-left-bottom bg-no-repeat bg-[url('/wp-content/uploads/2023/05/1478sembg.png')] bg-contain bg-blend-multiply">
         <div class="px-4 flex py-14 lg:py-40">
@@ -175,49 +195,54 @@
 </section>
 
 <section class="lg:my-16 py-16">
-    <div class="px-5 lg:px-0 lg:max-w-6xl mx-auto">
-        <h1 class="mb-16 text-center text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl">Conheça o nosso blog</h1>
-        <div class="lg:max-w-5xl mx-auto flex items-stretch gap-6">
-            <div class="mb-5 lg:mb-0 lg:w-3/4 flex flex-col gap-6 justify-between space-y-5 lg:space-y-0">
-                <div class="flex">
-                    <div class="hidden lg:block lg:w-1/2">
-                        <img src="/wp-content/uploads/2023/05/ContentImageOpacless.png" class="min-h-full object-center">
-                    </div>
-                    <div class="lg:w-1/2 p-6 bg-blue-50 flex flex-col">
-                        <span class="text-xs font-semibold text-blue-700 tracking-wider">Grafic Design</span>
-                        <h2 class="text-lg font-bold mb-2">Design is a Plan or The Construction of an Object.</h2>
-                        <p class="text-sm mb-6 text-gray-500">Lorem Ipsum is simply dummy text of the printing and industry page when looking at its layout.</p>
-                        <a href="" class="text-xs tracking-wider">read more</a>
-                    </div>
+    <?php if($query->have_posts()): ?>
+        <div class="px-5 lg:px-0 lg:max-w-6xl mx-auto">
+            <h1 class="mb-16 text-center text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl">Conheça o nosso blog</h1>
+            <div class="lg:max-w-5xl mx-auto flex items-stretch gap-6">
+                <div class="mb-5 lg:mb-0 lg:w-3/4 flex flex-col gap-6 justify-between space-y-5 lg:space-y-0">
+                    <?php while ( $query->have_posts() ) : $query->the_post(); ?>
+                        <div class="flex">
+                            <div class="hidden lg:block lg:w-1/2">
+                                <img src="<?php echo get_the_post_thumbnail_url(); ?>" class="min-h-full object-center object-cover">
+                            </div>
+                            <?php $categories = get_terms(array(
+                                'taxonomy'   => 'category',
+                                'hide_empty' => false,                            
+                            ))?>
+                            <div class="lg:w-1/2 p-6 bg-blue-50 flex flex-col">
+                                <!-- <?php # foreach($categories as $categorie): ?>
+                                    <span class="text-xs font-semibold text-blue-700 tracking-wider"><?php # echo $categorie->name ?></span>
+                                <?php #endforeach ?> -->
+                                <h2 class="text-lg font-bold mb-2"><?php echo the_title()?></h2>
+                                <div class="overflow-hidden h-12 mb-5">
+                                    <p class="text-base truncate block line-clamp-2 text-gray-500"><?php echo the_content()?></p>
+                                </div>
+                                <a href="<?php echo the_permalink()?>" class="text-xs tracking-wider">Leia mais</a>
+                            </div>
+                        </div>
+                    <?php endwhile ?>
                 </div>
-                <div class="flex">
-                    <div class="hidden lg:block lg:w-1/2">
-                        <img src="/wp-content/uploads/2023/05/ContentImageOpacless.png" class="min-h-full object-center">
-                    </div>
-                    <div class="lg:w-1/2 p-6 bg-blue-50 flex flex-col">
-                        <span class="text-xs font-semibold text-blue-700 tracking-wider">Grafic Design</span>
-                        <h2 class="text-lg font-bold mb-2">Design is a Plan or The Construction of an Object.</h2>
-                        <p class="text-sm mb-6 text-gray-500">Lorem Ipsum is simply dummy text of the printing and industry page when looking at its layout.</p>
-                        <a href="" class="text-xs tracking-wider">read more</a>
-                    </div>
-                </div>
-            </div>
-            <div class="hidden lg:w-1/4 lg:flex flex-col divide-y divide-gray-300 bg-emerald-900 px-4 py-3">
-                <div class="grid gap-2 py-4">
-                    <span class="text-xs font-semibold text-white">Grafic Design</span>
-                    <h2 class="text-lg font-semibold text-white">Design is a Plan or The Construction of an Object.</h2>
-                    <p class="text-sm mb-2 font-light text-white line-clamp-2">Lorem Ipsum is simply dummy text of the printing and industry page when looking at its layout.</p>
-                    <a href="" class="text-xs text-white tracking-widest">read more</a>
-                </div>
-                <div class="grid gap-2 py-4">
-                    <span class="text-xs font-semibold text-white">Grafic Design</span>
-                    <h2 class="text-lg font-semibold text-white">Design is a Plan or The Construction of an Object.</h2>
-                    <p class="text-sm mb-2 font-light text-white line-clamp-2">Lorem Ipsum is simply dummy text of the printing and industry page when looking at its layout.</p>
-                    <a href="" class="text-xs text-white tracking-widest">read more</a>
+                <div class="hidden lg:w-1/4 lg:flex flex-col divide-y divide-gray-300 bg-emerald-900 px-4 py-3">
+                    <?php #$categories = get_terms(array(
+                        #'taxonomy'   => 'category',
+                        #'hide_empty' => false,                            
+                   # ))?>
+                    <?php while ( $query->have_posts() ) : $query->the_post(); ?>
+                        <div class="grid gap-2 py-4">
+                            <!-- <?php #foreach($categories as $categorie): ?>
+                                <span class="text-xs font-semibold text-white"><?php echo $categorie->name ?></span>
+                            <?php #endforeach ?> -->
+                            <h2 class="text-lg font-semibold text-white"><?php echo the_title()?></h2>
+                            <div class="overflow-hidden h-12 mb-5 text-white">
+                                <p class="text-base truncate block line-clamp-2 text-white"><?php echo the_content()?></p>
+                            </div>
+                            <a href="<?php echo the_permalink()?>" class="text-xs text-white tracking-widest">Leia mais</a>
+                        </div>
+                    <?php endwhile ?>
                 </div>
             </div>
         </div>
-    </div>
+    <?php endif ?>
 </section>
 
 <section class="bg-[#08273B]">

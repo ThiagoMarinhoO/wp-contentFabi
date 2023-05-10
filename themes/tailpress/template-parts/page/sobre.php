@@ -1,7 +1,7 @@
 <div class="min-h-screen py-16 bg-gray-50">
     <div class="flex flex-col lg:flex-row space-y-8 lg:space-y-0">
         <div class="lg:w-1/4">
-            <img src="http://fabianaabath.test/wp-content/uploads/2023/05/FZP_1496-min-scaled.jpg" alt="" class="rounded-r-md">
+            <img src="/wp-content/uploads/2023/05/FZP_1496-min-scaled.jpg" alt="" class="rounded-r-md">
         </div>
         <div class="lg:w-3/4 px-5 lg:px-16"> 
             <span class="font-semibold text-green-800 mb-4">Sobre mim</span>
