@@ -215,7 +215,7 @@ $news = new WP_Query($news_args);
                                 <?php #endforeach ?> -->
                                 <h2 class="text-lg font-bold mb-2"><?php echo the_title()?></h2>
                                 <div class="overflow-hidden h-12 mb-5">
-                                    <p class="text-base truncate block line-clamp-2 text-gray-500"><?php echo the_content()?></p>
+                                    <p class="text-base truncate block line-clamp-2 text-gray-500"><?php echo wp_strip_all_tags(the_content());?></p>
                                 </div>
                                 <a href="<?php echo the_permalink()?>" class="text-xs tracking-wider">Leia mais</a>
                             </div>
@@ -247,15 +247,9 @@ $news = new WP_Query($news_args);
 
 <section class="bg-[#08273B]">
     <div class="bg-center bg-no-repeat bg-[url('/wp-content/uploads/2023/05/Vector.png')] bg-cover bg-blend-multiply">
-        <div class="px-5 lg:px-0 lg:max-w-2xl mx-auto py-20">
+        <div class="px-5 lg:px-0 lg:max-w-2xl mx-auto flex flex-col items-center py-20">
             <h1 class="mb-16 text-center text-4xl font-extrabold leading-none tracking-tight text-white md:text-5xl lg:text-6xl">Inscreva-se na nossa newsletter</h1>
-            <form>
-                <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only">Search</label>
-                <div class="relative">
-                    <input type="search" id="default-search" class="block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-emerald-500 focus:border-emerald-500" placeholder="Digite seu email ..." required>
-                    <button type="submit" class="text-white absolute right-2.5 bottom-2.5 bg-emerald-700 hover:bg-emerald-800 focus:ring-4 focus:outline-none focus:ring-emerald-300 font-medium rounded-lg text-sm px-4 py-2">Inscrever-se</button>
-                </div>
-            </form>
+            <a href="http://1d66a56.contato.site/listavip" class="text-white bg-emerald-700 hover:bg-emerald-800 focus:ring-4 focus:outline-none focus:ring-emerald-300 font-medium rounded-lg text-sm px-4 py-2">Inscrever-se</a>
         </div>
     </div>
 </section>

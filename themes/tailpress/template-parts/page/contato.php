@@ -8,27 +8,12 @@
                 </svg>
             </div>
             <p class="m-0 text-lg text-center font-semibold">Email</p>
-            <p class="m-0 text-gray-500">info@example.com</p>
-            <p class="m-0 text-gray-500">info@example.com</p>
+            <p class="m-0 text-gray-500">contato@fabianaabath.com.br</p>
         </div>
         <section class="container">
             <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900">Como podemos te Ajudar ?</h2>
             <p class="font-light text-gray-500 sm:text-xl lg:w-1/3">Entre em contato e nos informe de que modo podemos te ajudar !</p>
-            <form class="mt-8 container flex flex-col lg:items-end gap-6 space-y-5 lg:space-y-0">
-                <div class="container">
-                    <label for="subject" class="block mb-2 text-sm font-medium text-gray-900">Seu nome</label>
-                    <input type="text" id="subject" class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500" placeholder="Nome">
-                </div>
-                <div class="container">
-                    <label for="email" class="block mb-2 text-sm font-medium text-gray-900">Seu email</label>
-                    <input type="email" id="email" class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500" placeholder="name@fabianaabath.com" required>
-                </div>
-                <div class="container sm:col-span-2">
-                    <label for="message" class="block mb-2 text-sm font-medium text-gray-900">Sua mensagem</label>
-                    <textarea id="message" rows="6" class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500" placeholder="Deixe sua pergunta..."></textarea>
-                </div>
-                <button type="button" class="container lg:w-fit text-white bg-emerald-900 hover:bg-emerald-950 focus:ring-4 focus:ring-emerald-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 mt-5 lg:mt-0 focus:outline-none">Enviar</button>
-            </form>
+            <div class="mt-8 lg:mt-16"><?php echo do_shortcode( '[contact-form-7 id="428" title="Formulário de Contato"]' );?></div>
         </section>
     </div>
 </div>

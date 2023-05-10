@@ -6,6 +6,8 @@ $posts_args = array(
   // 'paged'          => $paged
 );
 
+// var_dump($posts_args);
+
 $posts_query = new WP_Query($posts_args);
 ?>
 
@@ -63,8 +65,9 @@ $posts_query = new WP_Query($posts_args);
             </div>
           <?php endwhile; ?>
         </div>
-        <div class="">
-            <?php
+        <div class="flex justify-center">
+          <?php
+                // var_dump($posts_args);
                 echo paginate_links( array(
                     'base'         => str_replace( 999999999, '%#%', esc_url( get_pagenum_link( 999999999 ) ) ),
                     'total'        => $posts_query->max_num_pages,
@@ -79,6 +82,7 @@ $posts_query = new WP_Query($posts_args);
                     'next_text'    => sprintf( '%1$s <i></i>', __( '&#8594;', 'text-domain' ) ),
                     'add_args'     => false,
                     'add_fragment' => '',
+                    
                 ) );
             ?>
         </div>
