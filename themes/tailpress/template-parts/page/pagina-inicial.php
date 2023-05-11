@@ -207,7 +207,7 @@ $deps_query = new WP_Query($depoimentos);
         </div>
     </div>
 </section>
-<section class="bg-white">
+<section id="depoimentos" class="bg-white">
     <div class="container lg:max-w-7xl px-6 py-10 mx-auto">
         <div class="mt-6 md:flex md:items-center md:justify-between">
             <div>
