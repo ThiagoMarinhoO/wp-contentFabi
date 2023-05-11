@@ -216,7 +216,7 @@ $deps_query = new WP_Query($depoimentos);
         </div>
     </div>
 </section>
-<section id="depoimentos" class="bg-white">
+<section id="depoimentos" class="bg-blue-50">
     <div class="container lg:max-w-7xl px-6 py-10 mx-auto">
         <div class="mt-6 md:flex md:items-center md:justify-between">
             <div>
@@ -227,7 +227,7 @@ $deps_query = new WP_Query($depoimentos);
         </div>
         <?php if ( $deps_query->have_posts() ) : ?>
             <div class="swiper-deps relative pt-10">
-                <div class="swiper-wrapper">
+                <div class="swiper-wrapper py-5 h-[32rem]">
                     <?php while ( $deps_query->have_posts() ) : $deps_query->the_post(); ?>
                         <div class="p-8 shadow-md rounded-lg swiper-slide max-w-sm lg:w-1/3">
                             <p class="leading-loose text-gray-500">
