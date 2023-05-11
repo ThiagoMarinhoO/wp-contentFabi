@@ -584,8 +584,8 @@ $deps_query = new WP_Query($depoimentos);
                 </div>
             </div>
         <?php endif ?>
-        </section>
     </div>
+</section>
 
 <section class="px-5 py-16 lg:my-16 lg:px-16">
     <div class="mx-auto flex flex-col lg:flex-row items-center space-y-8 gap-16">

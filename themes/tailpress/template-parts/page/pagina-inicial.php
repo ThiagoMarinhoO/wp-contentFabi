@@ -17,6 +17,20 @@ $news_args = array(
     )
 );
 $news = new WP_Query($news_args);
+
+$depoimentos = array(
+    'post_type' => 'depoimentos',
+    'posts_per_page' => -1,
+    'tax_query' => array(
+        array(
+            'taxonomy' => 'categorias',
+            'field' => 'slug',
+            'terms' => 'home'
+        )
+    )
+);
+
+$deps_query = new WP_Query($depoimentos);
 ?>
 <section class="bg-gray-900">
     <div class="bg-left-bottom bg-no-repeat bg-[url('/wp-content/uploads/2023/05/1478sembg.png')] bg-contain bg-blend-multiply">
@@ -193,7 +207,39 @@ $news = new WP_Query($news_args);
         </div>
     </div>
 </section>
-
+<section class="bg-white">
+    <div class="container lg:max-w-7xl px-6 py-10 mx-auto">
+        <div class="mt-6 md:flex md:items-center md:justify-between">
+            <div>
+                <h1 class="text-3xl font-extrabold text-gray-800 capitalize lg:text-5xl">
+                    Depoimentos
+                </h1>
+            </div>
+        </div>
+        <?php if ( $deps_query->have_posts() ) : ?>
+            <div class="swiper-deps relative pt-10">
+                <div class="swiper-wrapper">
+                    <?php while ( $deps_query->have_posts() ) : $deps_query->the_post(); ?>
+                        <div class="p-8 shadow-md rounded-lg swiper-slide max-w-sm lg:w-1/3">
+                            <p class="leading-loose text-gray-500">
+                                <?php echo the_post_thumbnail()?>
+                            </p>
+                            <div class="mt-8 -mx-2">
+                                <div class="mx-2">
+                                    <h1 class="font-semibold text-gray-800"><?php echo the_title() ?></h1>
+                                </div>
+                            </div>
+                        </div>
+                    <?php endwhile ?>
+                </div>
+                <div class="pagination-deps flex justify-between z-50 w-28 right-0 top-0 absolute">
+                    <div class="swiper-button-prev block"></div>
+                    <div class="swiper-button-next block"></div>
+                </div>
+            </div>
+        <?php endif ?>
+    </div>
+</section>
 <section class="lg:my-16 py-16">
     <?php if($query->have_posts()): ?>
         <div class="px-5 lg:px-0 lg:max-w-6xl mx-auto">

@@ -65,7 +65,7 @@ $posts_query = new WP_Query($posts_args);
             </div>
           <?php endwhile; ?>
         </div>
-        <div class="flex justify-center">
+        <div class="flex justify-center gap-5">
           <?php
                 // var_dump($posts_args);
                 echo paginate_links( array(

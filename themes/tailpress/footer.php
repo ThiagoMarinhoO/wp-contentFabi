@@ -43,9 +43,8 @@
 					</svg>
 				</div>
 				<div class="ml-4 lg:ml-0">
-					<h3 class="text-lg font-semibold">Nosso Email</h3>
-					<p class="text-gray-500 font-medium">info@yourdomain.com</p>
-					<p class="text-gray-500 font-medium">info@yourdomain.com</p>
+					<h3 class="text-lg font-semibold">Email</h3>
+					<p class="text-gray-500 font-medium">contato@fabianaabath.com.br</p>
 				</div>
 			</div>
 		</div>
