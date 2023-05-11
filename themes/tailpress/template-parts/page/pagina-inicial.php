@@ -32,7 +32,7 @@ $depoimentos = array(
 
 $deps_query = new WP_Query($depoimentos);
 ?>
-<section class="bg-gray-900">
+<section class="bg-gray-900 hidden lg:block">
     <div class="bg-left-bottom bg-no-repeat bg-[url('/wp-content/uploads/2023/05/1478sembg.png')] bg-contain bg-blend-multiply">
         <div class="px-4 flex py-14 lg:py-40">
             <div class="lg:w-1/3"></div>
@@ -41,6 +41,15 @@ $deps_query = new WP_Query($depoimentos);
                 <p class="text-xl lg:text-3xl font-normal text-gray-300 mb-4">Apoiando profissionais a construírem a carreira que desejam. E empresas a desenharem soluções em gestão e desenvolvimento de pessoas.</p>
             </div>
         </div>
+    </div>
+</section>
+
+<section class="bg-gray-900 lg:hidden">
+    <div class="container pt-14">
+        <h1 class="text-center mb-6 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl">Fabiana Abath. Especialista em gestão e desenvolvimento de carreira</h1>
+        <p class="text-center text-xl font-normal text-gray-300">Apoiando profissionais a construírem a carreira que desejam. E empresas a desenharem soluções em gestão e desenvolvimento de pessoas.</p>
+    </div>
+    <div class="h-96 bg-left-bottom bg-no-repeat bg-[url('/wp-content/uploads/2023/05/1478sembg.png')] bg-contain bg-blend-multiply">
     </div>
 </section>
 

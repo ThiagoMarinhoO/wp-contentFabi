@@ -27,7 +27,7 @@ $depoimentos = array(
 
 $deps_query = new WP_Query($depoimentos);
 ?>
-<section class="bg-gray-900">
+<section class="bg-gray-900 hidden lg:block">
     <div class="bg-left-bottom bg-no-repeat bg-[url('/wp-content/themes/tailpress/resources/images/1478sembg.png')] bg-contain bg-blend-multiply">
         <div class="px-4 flex py-14 lg:py-40">
             <div class="lg:w-1/3"></div>
@@ -37,6 +37,16 @@ $deps_query = new WP_Query($depoimentos);
                 <p class="text-xl lg:text-3xl font-normal text-gray-300">O método GROWP oferece os elementos fundamentais para quem deseja trabalhar  na área,  ainda que não seja psicólogo</p>
             </div>
         </div>
+    </div>
+</section>
+
+<section class="bg-gray-900 lg:hidden">
+    <div class="container pt-14">
+        <h1 class="text-center mb-6 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl">Aprenda a trabalhar como Orientadora de Carreira</h1>
+        <p class="text-center text-xl lg:text-3xl font-normal text-gray-300 mb-4">A única capacitação profissional da área totalmente online reconhecida pelo MEC</p>
+        <p class="text-center text-xl lg:text-3xl font-normal text-gray-300">O método GROWP oferece os elementos fundamentais para quem deseja trabalhar  na área,  ainda que não seja psicólogo</p>
+    </div>
+    <div class="h-96 bg-left-bottom bg-no-repeat bg-[url('/wp-content/uploads/2023/05/1478sembg.png')] bg-contain bg-blend-multiply">
     </div>
 </section>
 
