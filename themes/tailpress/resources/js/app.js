@@ -1,10 +1,10 @@
 jQuery(document).ready(function($) {
-    $('#modal').on('click', function() {
+      $('#modal').on('click', function() {
         $(this).addClass('hidden');
         $('#videoDep').attr('src', '');
-    });
+      });
 
-    $('.open-video').on('click', function() {
+      $('.open-video').on('click', function() {
           var depID = $(this).attr('depID')
           console.log('depID: '+depID)
           let modalContents = $(".deps-card").find(".video-url");
@@ -20,9 +20,9 @@ jQuery(document).ready(function($) {
                       console.log('to no if')
                 }
           }
-    });
+      });
 
-    $('.faq').click(function() {
+      $('.faq').click(function() {
         $(this).next("p").toggleClass('hidden');
         if ($(this).next("p").hasClass('hidden')) {
               $(this).find('svg').attr('class', 'w-6 h-6');
@@ -58,7 +58,6 @@ jQuery(document).ready(function($) {
                   prevEl: '.swiper-button-prev',
             },
       });
-
       var novoSwiper = new Swiper('.swiperProfissional', {
             slidesPerView: 'auto',
             spaceBetween: 72,
@@ -73,6 +72,14 @@ jQuery(document).ready(function($) {
             //       },
             // },
       });
+
+      // $(".accordion-open-heading").each(function(index) {
+      //       $(this).click(function(event) {
+      //         $(this).children(":first").toggleClass("rounded-xl rounded-t-xl");
+      //         $(this).children(":first").children(":eq(1)").toggleClass("rotate-180");
+      //         $(this).next(".accordion-open-body").toggleClass("hidden");
+      //       });
+      // });
 });
 
 window.addEventListener('DOMContentLoaded', function () {
@@ -101,3 +108,17 @@ window.addEventListener('DOMContentLoaded', function () {
         });
     })
 });
+
+window.addEventListener('DOMContentLoaded', function () {
+      const accordionItemHeaders = document.querySelectorAll("#accordion-open-heading");
+      accordionItemHeaders.forEach((accordionItemHeader,index) => {
+            accordionItemHeader.addEventListener("click", event => {
+
+            accordionItemHeader.children[0].classList.toggle("rounded-xl");
+            accordionItemHeader.children[0].classList.toggle("rounded-t-xl");
+            accordionItemHeader.children[0].children[1].classList.toggle("rotate-180");
+            document.querySelectorAll('#accordion-open-body')[index].classList.toggle('hidden')
+                  
+            });
+      });
+  })
