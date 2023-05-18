@@ -461,7 +461,7 @@ $deps_query = new WP_Query($depoimentos);
                     <span class="text-sm text-gray-500 font-semibold">ou</span>
                     <span class="flex text-sm text-gray-500 font-semibold">R$ 1997,00 à vista</span>
                 </div>
-                <button type="button" class="container text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 mt-6 focus:outline-none">Começar agora</button>
+                <button type="button" onclick="window.location.href = 'https://pay.hotmart.com/R61210971O'" class="container text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 mt-6 focus:outline-none">Começar agora</button>
 
             </div>
         </div>

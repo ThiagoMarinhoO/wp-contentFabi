@@ -54,7 +54,7 @@
 					<img src="/wp-content/uploads/2023/05/Identidade-Horizontal-reflexo-azul-1.png" class="h-9"/>
 				</a>
 				<div class="text-gray-500 mb-6 lg:mb-0">
-					<img src="/wp-content/uploads/2023/05/abopLogo.png" alt="" class="h-12">
+					<img src="/wp-content/themes/tailpress/resources/images/abop.png" alt="" class="h-12">
 				</div>
 				<div class="flex items-center gap-5">
 					<a href="https://twitter.com/_fabiam" class="hover:underline mr-4 lg:mr-0">

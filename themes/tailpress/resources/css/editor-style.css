@@ -1,6 +1,14 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+@font-face {
+    font-family: 'TheanoDidot';
+    src: url(../fonts/theano-didot/TheanoDidot-Regular.woff) format('woff'),
+         url(../fonts/theano-didot/TheanoDidot-Regular.woff2) format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
     @apply font-sans;
 }

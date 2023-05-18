@@ -37,7 +37,7 @@ $deps_query = new WP_Query($depoimentos);
         <div class="px-4 flex py-14 lg:py-40">
             <div class="lg:w-1/3"></div>
             <div class="px-5 lg:w-2/3 lg:px-16">
-                <h1 class="mb-6 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl">Fabiana Abath. Especialista em gestão e desenvolvimento de carreira</h1>
+                <h1 class="mb-6 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl" style="font-family: 'TheanoDidot'">Fabiana Abath. Especialista em gestão e desenvolvimento de carreira</h1>
                 <p class="text-xl lg:text-3xl font-normal text-gray-300 mb-4">Apoiando profissionais a construírem a carreira que desejam. E empresas a desenharem soluções em gestão e desenvolvimento de pessoas.</p>
             </div>
         </div>
@@ -71,7 +71,7 @@ $deps_query = new WP_Query($depoimentos);
                         <img class="rounded-t-lg h-full w-full" src="/wp-content/themes/tailpress/resources/images/entrevista-orientacao-vocacional.jpg">
                     </div>
                     <div class="p-5 h-2/3">
-                        <a href="#">
+                        <a href="/orientacao-de-carreira">
                             <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">Orientação de Carreira</h5>
                         </a>
                         <p class="mb-3 font-normal text-gray-700">Escolha com segurança a carreira que está alinhada ao seu estilo de vida, que valoriza seus talentos e tem demanda de mercado. </p>
@@ -216,26 +216,27 @@ $deps_query = new WP_Query($depoimentos);
         </div>
     </div>
 </section>
-<section id="depoimentos" class="bg-blue-50">
+<section class="bg-white">
     <div class="container lg:max-w-7xl px-6 py-10 mx-auto">
         <div class="mt-6 md:flex md:items-center md:justify-between">
             <div>
                 <h1 class="text-3xl font-extrabold text-gray-800 capitalize lg:text-5xl">
-                    Depoimentos
+                    O que dizem sobre o meu trabalho:
                 </h1>
             </div>
         </div>
         <?php if ( $deps_query->have_posts() ) : ?>
             <div class="swiper-deps relative pt-10">
-                <div class="swiper-wrapper py-5 h-[32rem]">
+                <div class="swiper-wrapper">
                     <?php while ( $deps_query->have_posts() ) : $deps_query->the_post(); ?>
                         <div class="p-8 shadow-md rounded-lg swiper-slide max-w-sm lg:w-1/3">
                             <p class="leading-loose text-gray-500">
-                                <?php echo the_post_thumbnail()?>
+                                <?php echo the_content()?>
                             </p>
                             <div class="mt-8 -mx-2">
                                 <div class="mx-2">
                                     <h1 class="font-semibold text-gray-800"><?php echo the_title() ?></h1>
+                                    <span class="text-sm text-gray-500"><?php echo get_field('rede_social' , get_the_ID())?></span>
                                 </div>
                             </div>
                         </div>

@@ -6,7 +6,7 @@ $depoimentos = array(
         array(
             'taxonomy' => 'categorias',
             'field' => 'slug',
-            'terms' => 'home'
+            'terms' => 'orientacao-de-carreira'
         )
     )
 );
@@ -39,7 +39,7 @@ $deps_query = new WP_Query($depoimentos);
     <div class="px-5 py-12 lg:py-32 lg:px-0 max-w-5xl mx-auto flex flex-col items-center">
         <h1 class="mb-12 text-center text-3xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl">Escolha com segurança a carreira que está alinhada ao seu estilo de vida, que valoriza seus talentos e tem demanda de mercado.</h1>
         <p class="mb-10 text-center text-xl lg:text-3xl font-normal text-gray-600">Com o meu direcionamento, seguindo uma metodologia única e autoral já aplicada em mais de 100 profissionais, em diferentes países do mundo, você conseguirá ter a carreira que deseja.</p>
-        <a href="#" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 cursor-pointer">Agendar sessão</a>
+        <a href="https://forms.gle/3DbVPpXBPPCnDYEZ6" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 cursor-pointer">Agendar sessão</a>
     </div>
 </section>
 
@@ -193,7 +193,7 @@ $deps_query = new WP_Query($depoimentos);
     <div class="w-[20rem] h-[20rem] rounded-full bg-gradient-to-l from-white/10 absolute -bottom-32 -right-32"></div>
     <div class="px-5 py-12 lg:py-32 lg:px-0 max-w-5xl mx-auto flex flex-col items-center">
         <h1 class="mb-12 text-center text-3xl font-extrabold leading-none tracking-tight text-white md:text-5xl">Fale diretamente com um consultor de carreira da equipe Fabiana Abath para agendar sua sessão de diagnóstico</h1>
-        <a href="#" class="text-white bg-white/20 hover:bg-white/10 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 cursor-pointer">Falar com um consultor de carreira</a>
+        <a href="https://forms.gle/3DbVPpXBPPCnDYEZ6" class="text-white bg-white/20 hover:bg-white/10 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 cursor-pointer">Falar com um consultor de carreira</a>
     </div>
 </section>
 
