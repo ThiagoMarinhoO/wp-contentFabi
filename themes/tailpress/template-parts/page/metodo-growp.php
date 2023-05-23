@@ -34,7 +34,8 @@ $deps_query = new WP_Query($depoimentos);
             <div class="px-5 lg:w-2/3 lg:px-16">
                 <h1 class="mb-6 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl">Aprenda a trabalhar como Orientadora de Carreira</h1>
                 <p class="text-xl lg:text-3xl font-normal text-gray-300 mb-4">A única capacitação profissional da área totalmente online reconhecida pelo MEC</p>
-                <p class="text-xl lg:text-3xl font-normal text-gray-300">O método GROWP oferece os elementos fundamentais para quem deseja trabalhar  na área,  ainda que não seja psicólogo</p>
+                <p class="text-xl lg:text-3xl font-normal text-gray-300 mb-5">O método GROWP oferece os elementos fundamentais para quem deseja trabalhar  na área,  ainda que não seja psicólogo</p>
+                <img src="/wp-content/themes/tailpress/resources/images/metodo-growp.png" style="width: 50%; margin-top: 20px;">
             </div>
         </div>
     </div>
@@ -44,7 +45,8 @@ $deps_query = new WP_Query($depoimentos);
     <div class="container pt-14">
         <h1 class="text-center mb-6 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl">Aprenda a trabalhar como Orientadora de Carreira</h1>
         <p class="text-center text-xl lg:text-3xl font-normal text-gray-300 mb-4">A única capacitação profissional da área totalmente online reconhecida pelo MEC</p>
-        <p class="text-center text-xl lg:text-3xl font-normal text-gray-300">O método GROWP oferece os elementos fundamentais para quem deseja trabalhar  na área,  ainda que não seja psicólogo</p>
+        <p class="text-center text-xl lg:text-3xl font-normal text-gray-300 mb-5">O método GROWP oferece os elementos fundamentais para quem deseja trabalhar  na área,  ainda que não seja psicólogo</p>
+        <img src="/wp-content/themes/tailpress/resources/images/metodo-growp.png">
     </div>
     <div class="h-96 bg-left-bottom bg-no-repeat bg-[url('/wp-content/uploads/2023/05/1478sembg.png')] bg-contain bg-blend-multiply">
     </div>
@@ -58,23 +60,16 @@ $deps_query = new WP_Query($depoimentos);
         <div class="grid grid-cols-1 gap-10 lg:grid-cols-3 lg:gap-x-16">
             <div class="">
                 <div class="w-full">
+                    <img src="/wp-content/themes/tailpress/resources/images/suitcase5.png">
+                    <h2 class="my-5 font-bold text-2xl">Transição de Carreira</h2>
+                    <p>para profissionais que desejam mudar de carreira, mas não fazem ideia do que querem.</p>
+                </div>
+            </div> 
+            <div class="">
+                <div class="w-full">
                     <img src="/wp-content/themes/tailpress/resources/images/suitcase1.png">
                     <h2 class="my-5 font-bold text-2xl">Desenvolvimento profissional</h2>
                     <p>para pessoas que estão se sentindo estagnadas profissionalmente e precisam de ajuda para definir o próximo passo de carreira e desenhar o plano de desenvolvimento profissional.</p>
-                </div>
-            </div> 
-            <div class="">
-                <div class="w-full">
-                    <img src="/wp-content/themes/tailpress/resources/images/suitcase2.png">
-                    <h2 class="my-5 font-bold text-2xl">Orientação para aposentadoria</h2>
-                    <p>para pessoas que estão prestes a se aposentar e querem continuar trabalhando, a escolherem uma nova carreira alinhada com sua nova fase de vida.</p>
-                </div>
-            </div> 
-            <div class="">
-                <div class="w-full">
-                    <img src="/wp-content/themes/tailpress/resources/images/suitcase3.png">
-                    <h2 class="my-5 font-bold text-2xl">Desenvolvimento da Liderança</h2>
-                    <p>para pessoas que queiram suporte para se desenvolver como líderes.</p>
                 </div>
             </div> 
             <div class="">
@@ -86,9 +81,16 @@ $deps_query = new WP_Query($depoimentos);
             </div> 
             <div class="">
                 <div class="w-full">
-                    <img src="/wp-content/themes/tailpress/resources/images/suitcase5.png">
-                    <h2 class="my-5 font-bold text-2xl">Transição de Carreira</h2>
-                    <p>para profissionais que desejam mudar de carreira, mas não fazem ideia do que querem.</p>
+                    <img src="/wp-content/themes/tailpress/resources/images/suitcase3.png">
+                    <h2 class="my-5 font-bold text-2xl">Desenvolvimento da Liderança</h2>
+                    <p>para pessoas que queiram suporte para se desenvolver como líderes.</p>
+                </div>
+            </div> 
+            <div class="">
+                <div class="w-full">
+                    <img src="/wp-content/themes/tailpress/resources/images/suitcase2.png">
+                    <h2 class="my-5 font-bold text-2xl">Orientação para aposentadoria</h2>
+                    <p>para pessoas que estão prestes a se aposentar e querem continuar trabalhando, a escolherem uma nova carreira alinhada com sua nova fase de vida.</p>
                 </div>
             </div> 
         </div>
@@ -134,6 +136,9 @@ $deps_query = new WP_Query($depoimentos);
                 </div>
             </div> 
         <?php endif; ?>      
+        <div class="w-full text-center">
+            <button type="button" onclick="window.location.href = 'https://pay.hotmart.com/R61210971O'" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 mt-6 focus:outline-none w-1/5">Quero começar agora</button>
+        </div>
     </div>
 </section>
 
@@ -217,7 +222,7 @@ $deps_query = new WP_Query($depoimentos);
     <div class="container mx-auto">
         <div class="bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg lg:w-1/2 py-10 mx-auto flex justify-betweenr items-center rounded-lg flex-col px-8 lg:px-20 text-center">
             <h2 class="my-5 font-bold text-4xl text-white">Não é coaching !</h2>
-            <p class="text-1xl text-[#D5D8DC]">Não é coaching. O Método GROWP tem como bases teórica e prática a Gestalt-terapia e na Psicologia da Carreira.</p>
+            <p class="text-1xl text-[#D5D8DC]">O Método GROWP tem como bases teórica e prática a Gestalt-terapia e na Psicologia da Carreira.</p>
         </div>
     </div>
 </section>
@@ -600,7 +605,7 @@ $deps_query = new WP_Query($depoimentos);
 <section class="px-5 py-16 lg:my-16 lg:px-16">
     <div class="mx-auto flex flex-col lg:flex-row items-center space-y-8 gap-16">
         <div class="lg:w-3/4">
-            <h1 class="font-bold text-4xl mb-10">Especialista em gestão e desenvolvimento de carreira, psicóloga por formação. Mais de 20 anos de experiência na área de desenvolvimento humano e organizacional, com passagens por empresas nacionais e multinacionais.</h1>
+            <h1 class="font-bold text-4xl mb-10">Psicóloga, Especialista em gestão e desenvolvimento de carreira. Mais de 20 anos de experiência na área de desenvolvimento humano e organizacional, com passagens por empresas nacionais e multinacionais.</h1>
             <div class="grid space-y-8">
                 <div class="flex items-center gap-4">
                     <div class="mr-4 lg:mr-0">
@@ -693,7 +698,7 @@ $deps_query = new WP_Query($depoimentos);
 
         <div class="mt-8 space-y-8 lg:mt-16">
 
-            <div class="p-8 bg-gray-100 rounded-lg">
+            <!-- <div class="p-8 bg-gray-100 rounded-lg">
                 <button class="flex items-center justify-between rounded-md px-4 py-2 text-gray-700 w-full faq">
                     
                     <h1 class="font-semibold text-gray-700">Quanto custa ?</h1>
@@ -708,7 +713,7 @@ $deps_query = new WP_Query($depoimentos);
                <p class="hidden bg-gray-200 rounded-md p-4 mt-2 transition-all duration-500 opacity-0">
                 O valor do investimento é informado pela consultora de carreira, depois que você preencher o formulário de contato.
                 </p>
-            </div>
+            </div> -->
 
             <div class="p-8 bg-gray-100 rounded-lg">
                 <button class="flex items-center justify-between rounded-md px-4 py-2 text-gray-700 w-full faq">
@@ -910,7 +915,7 @@ $deps_query = new WP_Query($depoimentos);
                 </button>
 
                <p class="hidden bg-gray-200 rounded-md p-4 mt-2 transition-all duration-500 opacity-0">
-                O total é de 65 horas, contando com os conteúdos obrigatórios e as leituras complementares.
+                    O total é de 102h, contando com os conteúdos obrigatórios e as leituras complementares. 
                 </p>
             </div>
 
@@ -930,6 +935,9 @@ $deps_query = new WP_Query($depoimentos);
                 Através da plataforma Hotmart.
                 </p>
             </div>
+        </div>
+        <div class="w-full text-center">
+            <button type="button" onclick="window.location.href = 'https://pay.hotmart.com/R61210971O'" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 mt-6 focus:outline-none w-1/5">Quero começar agora</button>
         </div>
     </div>
 </section>
