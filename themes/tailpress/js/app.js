@@ -78,6 +78,22 @@ jQuery(document).ready(function ($) {
     //       },
     // },
   });
+  // Esconder todos os itens de conteúdo das abas, exceto o primeiro
+  $(".tabcontent:not(:first)").hide();
+
+  // Manipular o evento de clique nos botões de abas
+  $(".tablinks").click(function () {
+    // Obter o índice do botão de aba clicado
+    var tabIndex = $(this).index();
+
+    // Esconder todos os itens de conteúdo das abas
+    $(".tabcontent").hide();
+    $(".tablinks").removeClass('bg-gray-900 text-white');
+
+    // Mostrar o item de conteúdo da aba selecionada
+    $(".tabcontent").eq(tabIndex).show();
+    $(".tablinks").eq(tabIndex).addClass('bg-gray-900 text-white');
+  });
 
   // $(".accordion-open-heading").each(function(index) {
   //       $(this).click(function(event) {
