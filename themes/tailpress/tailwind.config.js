@@ -20,7 +20,10 @@ module.exports = {
             },
         },
         extend: {
-            colors: tailpress.colorMapper(tailpress.theme('settings.color.palette', theme)),
+            // colors: tailpress.colorMapper(tailpress.theme('settings.color.palette', theme)),
+            colors:{
+                custom: '#da4437',
+            },
             fontSize: tailpress.fontSizeMapper(tailpress.theme('settings.typography.fontSizes', theme)),
             // fontFamily: {
             //     theano: ['']
