@@ -13,8 +13,21 @@
     
     $deps_query = new WP_Query($depoimentos);
 ?>
+<section class="hidden lg:block">
+    <div class="bg-left-bottom bg-no-repeat bg-[url('/wp-content/uploads/2023/06/file0.png')] bg-cover bg-blend-multiply">
+        <div class="px-4 flex py-14 lg:py-36">
+            <div class="lg:w-1/3"></div>
+            <div class="px-5 lg:w-2/3 lg:px-16">
+                <img src="/wp-content/themes/tailpress/resources/images/logo-comunidade.png" alt="" class="h-12 mb-4">
+                <h1 class="mb-6 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl">Encontre em um único lugar tudo o que precisa para crescer e se desenvolver como Orientadora de Carreira.</h1>
+                <p class="text-xl lg:text-2xl font-normal text-gray-300 mb-12">A maneira mais simples e rápida de se manter atualizada com conteúdo de qualidade para entregar o melhor atendimento aos seus clientes.</p>
+                <a href="/comunidade-growp/#planos" class="text-white bg-custom hover:bg-transparent transition duration-300 ease-in-out border-custom border-y border-x focus:ring-4 focus:ring-orange-300 font-medium rounded-lg text-lg px-5 py-2.5 mr-2 mb-2 focus:outline-none cursor-pointer">Quero fazer parte</a>
+            </div>
+        </div>
+    </div>
+</section>
 
-<section class="bg-gray-900 hidden lg:block ">
+<section class="bg-gray-900 hidden">
     <div class="bg-left-bottom bg-no-repeat bg-[url('/wp-content/themes/tailpress/resources/images/1478sembg.png')] bg-contain bg-blend-multiply">
         <div class="px-4 flex py-14 lg:py-40">
             <div class="lg:w-1/3"></div>
@@ -390,19 +403,48 @@
     </div>
 </section>
 
-<section class="relative bg-gray-900 pt-12 lg:pt-20 lg:px-16">
-    <div class="hidden lg:block h-12 w-12 lg:h-16 lg:w-16 bg-gray-900 rotate-45 absolute -bottom-6 right-[45%] lg:right-[47%]"></div>
-    <div class="flex flex-col-reverse lg:flex-row">
-        <div class="lg:w-1/4 flex items-end">
-            <img src="/wp-content/themes/tailpress/resources/images/1478sembg.png" alt="" class="w-full">
+<section class="bg-gray-100 relative pt-12 lg:pt-20 lg:px-16">
+    <div class="hidden lg:block h-12 w-12 lg:h-16 lg:w-16 bg-gray-100 rotate-45 absolute -bottom-6 right-[45%] lg:right-[47%]"></div>
+    <div class="flex flex-col-reverse lg:flex-row items-center gap-12">
+        <div class="lg:w-1/3 relative">
+            <img src="/wp-content/uploads/2023/05/FZP_1478-scaled.jpg" alt="" class="rounded-md">
+            <div class="absolute -left-8 -bottom-8 -z-50">
+                <svg width="93" height="93" viewBox="0 0 93 93" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="2.5" cy="2.5" r="2.5" fill="#111928"></circle>
+                    <circle cx="2.5" cy="24.5" r="2.5" fill="#111928"></circle>
+                    <circle cx="2.5" cy="46.5" r="2.5" fill="#111928"></circle>
+                    <circle cx="2.5" cy="68.5" r="2.5" fill="#111928"></circle>
+                    <circle cx="2.5" cy="90.5" r="2.5" fill="#111928"></circle>
+                    <circle cx="24.5" cy="2.5" r="2.5" fill="#111928"></circle>
+                    <circle cx="24.5" cy="24.5" r="2.5" fill="#111928"></circle>
+                    <circle cx="24.5" cy="46.5" r="2.5" fill="#111928"></circle>
+                    <circle cx="24.5" cy="68.5" r="2.5" fill="#111928"></circle>
+                    <circle cx="24.5" cy="90.5" r="2.5" fill="#111928"></circle>
+                    <circle cx="46.5" cy="2.5" r="2.5" fill="#111928"></circle>
+                    <circle cx="46.5" cy="24.5" r="2.5" fill="#111928"></circle>
+                    <circle cx="46.5" cy="46.5" r="2.5" fill="#111928"></circle>
+                    <circle cx="46.5" cy="68.5" r="2.5" fill="#111928"></circle>
+                    <circle cx="46.5" cy="90.5" r="2.5" fill="#111928"></circle>
+                    <circle cx="68.5" cy="2.5" r="2.5" fill="#111928"></circle>
+                    <circle cx="68.5" cy="24.5" r="2.5" fill="#111928"></circle>
+                    <circle cx="68.5" cy="46.5" r="2.5" fill="#111928"></circle>
+                    <circle cx="68.5" cy="68.5" r="2.5" fill="#111928"></circle>
+                    <circle cx="68.5" cy="90.5" r="2.5" fill="#111928"></circle>
+                    <circle cx="90.5" cy="2.5" r="2.5" fill="#111928"></circle>
+                    <circle cx="90.5" cy="24.5" r="2.5" fill="#111928"></circle>
+                    <circle cx="90.5" cy="46.5" r="2.5" fill="#111928"></circle>
+                    <circle cx="90.5" cy="68.5" r="2.5" fill="#111928"></circle>
+                    <circle cx="90.5" cy="90.5" r="2.5" fill="#111928"></circle>
+                </svg>
+            </div>
         </div>
-        <div class="lg:w-3/4 flex justify-center">
-            <div class="w-3/4 pb-8">
-                <h1 class="mb-8 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl">Conheça Fabiana Abath, criadora da Comunidade GROWP</h1>
-                <p class="text-xl lg:text-2xl font-normal text-gray-300 mb-8">Sou Fabiana Abath, psicóloga, orientadora de carreira, consultora de gestão e desenvolvimento de carreira para empresas, especialista em desenvolvimento humano e organizacional. A maneira mais simples e rápida de se manter atualizada com conteúdo de qualidade para entregar o melhor atendimento aos seus clientes.</p>
-                <p class="text-xl lg:text-2xl font-normal text-gray-300 mb-8">Há 21 anos trabalho para empresas apoiando no desenho e operação das estratégias de treinamento e desenvolvimento. Já facilitei o desenvolvimento de centenas líderes ao longo da minha trajetória e me orgulho em ter participado do desenho de estratégias de gestão de pessoas que já colocaram dois de meus clientes na Lista GPTW - Melhores Empresas para Trabalhar no Rio de Janeiro, por mais de uma vez.</p>
-                <p class="text-xl lg:text-2xl font-normal text-gray-300 mb-8">Desde 2014 trabalho com Orientação Profissional e de Carreira e comecei a me especializar no atendimento de adultos em 2016. Criei o Método GROWP, com base na psicologia da carreira,  que já transformou a vida de muitos profissionais! E é esse o método que ensino no Método GROWP | Capacitação profissional em orientação de carreira</p>
-                <p class="text-xl lg:text-2xl font-bold text-gray-300 mb-8">Hoje já são mais de 100 alunas formadas aplicando o que aprenderam comigo e tendo resultados incríveis!</p>
+        <div class="lg:w-2/3 flex justify-center">
+            <div class="pb-8">
+                <h1 class="mb-8 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl">Conheça Fabiana Abath, criadora da Comunidade GROWP</h1>
+                <p class="text-xl lg:text-2xl font-normal text-gray-900 mb-8">Sou Fabiana Abath, psicóloga, orientadora de carreira, consultora de gestão e desenvolvimento de carreira para empresas, especialista em desenvolvimento humano e organizacional. A maneira mais simples e rápida de se manter atualizada com conteúdo de qualidade para entregar o melhor atendimento aos seus clientes.</p>
+                <p class="text-xl lg:text-2xl font-normal text-gray-900 mb-8">Há 21 anos trabalho para empresas apoiando no desenho e operação das estratégias de treinamento e desenvolvimento. Já facilitei o desenvolvimento de centenas líderes ao longo da minha trajetória e me orgulho em ter participado do desenho de estratégias de gestão de pessoas que já colocaram dois de meus clientes na Lista GPTW - Melhores Empresas para Trabalhar no Rio de Janeiro, por mais de uma vez.</p>
+                <p class="text-xl lg:text-2xl font-normal text-gray-900 mb-8">Desde 2014 trabalho com Orientação Profissional e de Carreira e comecei a me especializar no atendimento de adultos em 2016. Criei o Método GROWP, com base na psicologia da carreira,  que já transformou a vida de muitos profissionais! E é esse o método que ensino no Método GROWP | Capacitação profissional em orientação de carreira</p>
+                <p class="text-xl lg:text-2xl font-bold text-gray-900 mb-8">Hoje já são mais de 100 alunas formadas aplicando o que aprenderam comigo e tendo resultados incríveis!</p>
             </div>
         </div>
     </div>
