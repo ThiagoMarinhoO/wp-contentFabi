@@ -27,7 +27,7 @@
     </div>
 </section>
 
-<section class="bg-gray-900 hidden">
+<!-- <section class="bg-gray-900 hidden">
     <div class="bg-left-bottom bg-no-repeat bg-[url('/wp-content/themes/tailpress/resources/images/1478sembg.png')] bg-contain bg-blend-multiply">
         <div class="px-4 flex py-14 lg:py-40">
             <div class="lg:w-1/3"></div>
@@ -39,7 +39,7 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
 
 <section class="bg-gray-900 lg:hidden lg:px-16">
     <div class="container pt-14">
@@ -405,7 +405,7 @@
 
 <section class="bg-gray-100 relative pt-12 lg:pt-20 lg:px-16">
     <div class="hidden lg:block h-12 w-12 lg:h-16 lg:w-16 bg-gray-100 rotate-45 absolute -bottom-6 right-[45%] lg:right-[47%]"></div>
-    <div class="flex flex-col-reverse lg:flex-row items-center gap-12">
+    <div class="container flex flex-col-reverse lg:flex-row items-center gap-12">
         <div class="lg:w-1/3 relative">
             <img src="/wp-content/uploads/2023/05/FZP_1478-scaled.jpg" alt="" class="rounded-md">
             <div class="absolute -left-8 -bottom-8 -z-50">
